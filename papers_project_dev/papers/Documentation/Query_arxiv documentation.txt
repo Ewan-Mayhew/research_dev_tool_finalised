@@ -1,0 +1,34 @@
+query_arXiv documentation:
+
+query_arxiv:
+function description: Queries the arXiv API for papers matching a keyword and a maximum number of results. Returns a list of papers with their titles, summaries, links, and publication dates.
+
+cosine_similarity:
+function description: Computes the cosine similarity between two vectors. Returns a value representing the similarity between the vectors, where 1 indicates identical direction and 0 indicates orthogonal directions.
+
+load_existing_embeddings:
+function description: Loads existing paper embeddings from a specified JSON file and returns the data.
+
+find_similar_embeddings:
+function description: Finds and matches new paper embeddings against existing embeddings based on cosine similarity. Returns a list of matches where the similarity exceeds a given threshold.
+
+remove_duplicates:
+function description: Removes duplicate entries from a list of matches based on the new_link field. Returns a list of unique matches.
+
+filter_by_date_range:
+function description: Filters matches to include only those within a specified date range. Returns the filtered list of matches.
+
+save_matches_to_file:
+function description: Saves a list of matches to a JSON file, sorted by similarity score in descending order. Provides a success message indicating the output file path.
+
+parallel_query_arxiv:
+function description: Performs concurrent queries to arXiv for multiple keywords using a thread pool. Returns a combined list of results from all queries.
+
+batch_encode:
+function description: Encodes summaries into embeddings using a SentenceTransformer model in batches. Returns a list of embeddings corresponding to the input summaries.
+
+main:
+function description: Orchestrates the workflow for querying arXiv, encoding summaries, finding similar embeddings, removing duplicates, filtering by date range, and saving the results to a file. Executes the entire process based on input parameters.
+
+Command:
+function description: A Django management command that runs the arXiv query and saves the results. Configures parameters like disciplines, maximum results, file paths, and date range, and invokes the main function to execute the process.

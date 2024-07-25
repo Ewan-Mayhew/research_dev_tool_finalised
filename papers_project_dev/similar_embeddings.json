@@ -1,0 +1,672 @@
+[
+    {
+        "new_title": "Heterogeneous Contrastive Learning for Foundation Models and Beyond",
+        "new_link": "http://arxiv.org/abs/2404.00225v1",
+        "new_summary": "  In the era of big data and Artificial Intelligence, an emerging paradigm is\nto utilize contrastive self-supervised learning to model large-scale\nheterogeneous data. Many existing foundation models benefit from the\ngeneralization capability of contrastive self-supervised learning by learning\ncompact and high-quality representations without relying on any label\ninformation. Amidst the explosive advancements in foundation models across\nmultiple domains, including natural language processing and computer vision, a\nthorough survey on heterogeneous contrastive learning for the foundation model\nis urgently needed. In response, this survey critically evaluates the current\nlandscape of heterogeneous contrastive learning for foundation models,\nhighlighting the open challenges and future trends of contrastive learning. In\nparticular, we first present how the recent advanced contrastive learning-based\nmethods deal with view heterogeneity and how contrastive learning is applied to\ntrain and fine-tune the multi-view foundation models. Then, we move to\ncontrastive learning methods for task heterogeneity, including pretraining\ntasks and downstream tasks, and show how different tasks are combined with\ncontrastive learning loss for different purposes. Finally, we conclude this\nsurvey by discussing the open challenges and shedding light on the future\ndirections of contrastive learning.\n",
+        "pdf_link": "https://arxiv.org/pdf/2404.00225v1.pdf",
+        "similarity": 1.0000000493859338,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2404.00225v1",
+        "published": "2024-03-30"
+    },
+    {
+        "new_title": "Contrastive Representation Learning: A Framework and Review",
+        "new_link": "http://arxiv.org/abs/2010.05113v2",
+        "new_summary": "  Contrastive Learning has recently received interest due to its success in\nself-supervised representation learning in the computer vision domain. However,\nthe origins of Contrastive Learning date as far back as the 1990s and its\ndevelopment has spanned across many fields and domains including Metric\nLearning and natural language processing. In this paper we provide a\ncomprehensive literature review and we propose a general Contrastive\nRepresentation Learning framework that simplifies and unifies many different\ncontrastive learning methods. We also provide a taxonomy for each of the\ncomponents of contrastive learning in order to summarise it and distinguish it\nfrom other forms of machine learning. We then discuss the inductive biases\nwhich are present in any contrastive learning system and we analyse our\nframework under different views from various sub-fields of Machine Learning.\nExamples of how contrastive learning has been applied in computer vision,\nnatural language processing, audio processing, and others, as well as in\nReinforcement Learning are also presented. Finally, we discuss the challenges\nand some of the most promising future research directions ahead.\n",
+        "pdf_link": "https://arxiv.org/pdf/2010.05113v2.pdf",
+        "similarity": 0.7520375848790919,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2404.00225v1",
+        "published": "2020-10-10"
+    },
+    {
+        "new_title": "Adversarial Graph Contrastive Learning with Information Regularization",
+        "new_link": "http://arxiv.org/abs/2202.06491v5",
+        "new_summary": "  Contrastive learning is an effective unsupervised method in graph\nrepresentation learning. Recently, the data augmentation based contrastive\nlearning method has been extended from images to graphs. However, most prior\nworks are directly adapted from the models designed for images. Unlike the data\naugmentation on images, the data augmentation on graphs is far less intuitive\nand much harder to provide high-quality contrastive samples, which are the key\nto the performance of contrastive learning models. This leaves much space for\nimprovement over the existing graph contrastive learning frameworks. In this\nwork, by introducing an adversarial graph view and an information regularizer,\nwe propose a simple but effective method, Adversarial Graph Contrastive\nLearning (ARIEL), to extract informative contrastive samples within a\nreasonable constraint. It consistently outperforms the current graph\ncontrastive learning methods in the node classification task over various\nreal-world datasets and further improves the robustness of graph contrastive\nlearning. The code is at https://github.com/Shengyu-Feng/ARIEL.\n",
+        "pdf_link": "https://arxiv.org/pdf/2202.06491v5.pdf",
+        "similarity": 0.7265538414492236,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2101.11525v2",
+        "published": "2022-02-14"
+    },
+    {
+        "new_title": "Calibrating and Improving Graph Contrastive Learning",
+        "new_link": "http://arxiv.org/abs/2101.11525v2",
+        "new_summary": "  Graph contrastive learning algorithms have demonstrated remarkable success in\nvarious applications such as node classification, link prediction, and graph\nclustering. However, in unsupervised graph contrastive learning, some\ncontrastive pairs may contradict the truths in downstream tasks and thus the\ndecrease of losses on these pairs undesirably harms the performance in the\ndownstream tasks. To assess the discrepancy between the prediction and the\nground-truth in the downstream tasks for these contrastive pairs, we adapt the\nexpected calibration error (ECE) to graph contrastive learning. The analysis of\nECE motivates us to propose a novel regularization method, Contrast-Reg, to\nensure that decreasing the contrastive loss leads to better performance in the\ndownstream tasks. As a plug-in regularizer, Contrast-Reg effectively improves\nthe performance of existing graph contrastive learning algorithms. We provide\nboth theoretical and empirical results to demonstrate the effectiveness of\nContrast-Reg in enhancing the generalizability of the Graph Neural Network(GNN)\nmodel and improving the performance of graph contrastive algorithms with\ndifferent similarity definitions and encoder backbones across various\ndownstream tasks.\n",
+        "pdf_link": "https://arxiv.org/pdf/2101.11525v2.pdf",
+        "similarity": 1.000000033065938,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2101.11525v2",
+        "published": "2021-01-27"
+    },
+    {
+        "new_title": "M2HGCL: Multi-Scale Meta-Path Integrated Heterogeneous Graph Contrastive\n  Learning",
+        "new_link": "http://arxiv.org/abs/2309.01101v1",
+        "new_summary": "  Inspired by the successful application of contrastive learning on graphs,\nresearchers attempt to impose graph contrastive learning approaches on\nheterogeneous information networks. Orthogonal to homogeneous graphs, the types\nof nodes and edges in heterogeneous graphs are diverse so that specialized\ngraph contrastive learning methods are required. Most existing methods for\nheterogeneous graph contrastive learning are implemented by transforming\nheterogeneous graphs into homogeneous graphs, which may lead to ramifications\nthat the valuable information carried by non-target nodes is undermined thereby\nexacerbating the performance of contrastive learning models. Additionally,\ncurrent heterogeneous graph contrastive learning methods are mainly based on\ninitial meta-paths given by the dataset, yet according to our deep-going\nexploration, we derive empirical conclusions: only initial meta-paths cannot\ncontain sufficiently discriminative information; and various types of\nmeta-paths can effectively promote the performance of heterogeneous graph\ncontrastive learning methods. To this end, we propose a new multi-scale\nmeta-path integrated heterogeneous graph contrastive learning (M2HGCL) model,\nwhich discards the conventional heterogeneity-homogeneity transformation and\nperforms the graph contrastive learning in a joint manner. Specifically, we\nexpand the meta-paths and jointly aggregate the direct neighbor information,\nthe initial meta-path neighbor information and the expanded meta-path neighbor\ninformation to sufficiently capture discriminative information. A specific\npositive sampling strategy is further imposed to remedy the intrinsic\ndeficiency of contrastive learning, i.e., the hard negative sample sampling\nissue. Through extensive experiments on three real-world datasets, we\ndemonstrate that M2HGCL outperforms the current state-of-the-art baseline\nmodels.\n",
+        "pdf_link": "https://arxiv.org/pdf/2309.01101v1.pdf",
+        "similarity": 0.7100732835988691,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2101.11525v2",
+        "published": "2023-09-03"
+    },
+    {
+        "new_title": "InfoGCL: Information-Aware Graph Contrastive Learning",
+        "new_link": "http://arxiv.org/abs/2110.15438v1",
+        "new_summary": "  Various graph contrastive learning models have been proposed to improve the\nperformance of learning tasks on graph datasets in recent years. While\neffective and prevalent, these models are usually carefully customized. In\nparticular, although all recent researches create two contrastive views, they\ndiffer greatly in view augmentations, architectures, and objectives. It remains\nan open question how to build your graph contrastive learning model from\nscratch for particular graph learning tasks and datasets. In this work, we aim\nto fill this gap by studying how graph information is transformed and\ntransferred during the contrastive learning process and proposing an\ninformation-aware graph contrastive learning framework called InfoGCL. The key\npoint of this framework is to follow the Information Bottleneck principle to\nreduce the mutual information between contrastive parts while keeping\ntask-relevant information intact at both the levels of the individual module\nand the entire framework so that the information loss during graph\nrepresentation learning can be minimized. We show for the first time that all\nrecent graph contrastive learning methods can be unified by our framework. We\nempirically validate our theoretical analysis on both node and graph\nclassification benchmark datasets, and demonstrate that our algorithm\nsignificantly outperforms the state-of-the-arts.\n",
+        "pdf_link": "https://arxiv.org/pdf/2110.15438v1.pdf",
+        "similarity": 0.7904337800407453,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2101.11525v2",
+        "published": "2021-10-28"
+    },
+    {
+        "new_title": "AutoGCL: Automated Graph Contrastive Learning via Learnable View\n  Generators",
+        "new_link": "http://arxiv.org/abs/2109.10259v2",
+        "new_summary": "  Contrastive learning has been widely applied to graph representation\nlearning, where the view generators play a vital role in generating effective\ncontrastive samples. Most of the existing contrastive learning methods employ\npre-defined view generation methods, e.g., node drop or edge perturbation,\nwhich usually cannot adapt to input data or preserve the original semantic\nstructures well. To address this issue, we propose a novel framework named\nAutomated Graph Contrastive Learning (AutoGCL) in this paper. Specifically,\nAutoGCL employs a set of learnable graph view generators orchestrated by an\nauto augmentation strategy, where every graph view generator learns a\nprobability distribution of graphs conditioned by the input. While the graph\nview generators in AutoGCL preserve the most representative structures of the\noriginal graph in generation of every contrastive sample, the auto augmentation\nlearns policies to introduce adequate augmentation variances in the whole\ncontrastive learning procedure. Furthermore, AutoGCL adopts a joint training\nstrategy to train the learnable view generators, the graph encoder, and the\nclassifier in an end-to-end manner, resulting in topological heterogeneity yet\nsemantic similarity in the generation of contrastive samples. Extensive\nexperiments on semi-supervised learning, unsupervised learning, and transfer\nlearning demonstrate the superiority of our AutoGCL framework over the\nstate-of-the-arts in graph contrastive learning. In addition, the visualization\nresults further confirm that the learnable view generators can deliver more\ncompact and semantically meaningful contrastive samples compared against the\nexisting view generation methods.\n",
+        "pdf_link": "https://arxiv.org/pdf/2109.10259v2.pdf",
+        "similarity": 0.7227359522778524,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2101.11525v2",
+        "published": "2021-09-21"
+    },
+    {
+        "new_title": "A Message Passing Perspective on Learning Dynamics of Contrastive\n  Learning",
+        "new_link": "http://arxiv.org/abs/2303.04435v1",
+        "new_summary": "  In recent years, contrastive learning achieves impressive results on\nself-supervised visual representation learning, but there still lacks a\nrigorous understanding of its learning dynamics. In this paper, we show that if\nwe cast a contrastive objective equivalently into the feature space, then its\nlearning dynamics admits an interpretable form. Specifically, we show that its\ngradient descent corresponds to a specific message passing scheme on the\ncorresponding augmentation graph. Based on this perspective, we theoretically\ncharacterize how contrastive learning gradually learns discriminative features\nwith the alignment update and the uniformity update. Meanwhile, this\nperspective also establishes an intriguing connection between contrastive\nlearning and Message Passing Graph Neural Networks (MP-GNNs). This connection\nnot only provides a unified understanding of many techniques independently\ndeveloped in each community, but also enables us to borrow techniques from\nMP-GNNs to design new contrastive learning variants, such as graph attention,\ngraph rewiring, jumpy knowledge techniques, etc. We believe that our message\npassing perspective not only provides a new theoretical understanding of\ncontrastive learning dynamics, but also bridges the two seemingly independent\nareas together, which could inspire more interleaving studies to benefit from\neach other. The code is available at\nhttps://github.com/PKU-ML/Message-Passing-Contrastive-Learning.\n",
+        "pdf_link": "https://arxiv.org/pdf/2303.04435v1.pdf",
+        "similarity": 0.7003499528715124,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2101.11525v2",
+        "published": "2023-03-08"
+    },
+    {
+        "new_title": "GraphCL: Contrastive Self-Supervised Learning of Graph Representations",
+        "new_link": "http://arxiv.org/abs/2007.08025v1",
+        "new_summary": "  We propose Graph Contrastive Learning (GraphCL), a general framework for\nlearning node representations in a self supervised manner. GraphCL learns node\nembeddings by maximizing the similarity between the representations of two\nrandomly perturbed versions of the intrinsic features and link structure of the\nsame node's local subgraph. We use graph neural networks to produce two\nrepresentations of the same node and leverage a contrastive learning loss to\nmaximize agreement between them. In both transductive and inductive learning\nsetups, we demonstrate that our approach significantly outperforms the\nstate-of-the-art in unsupervised learning on a number of node classification\nbenchmarks.\n",
+        "pdf_link": "https://arxiv.org/pdf/2007.08025v1.pdf",
+        "similarity": 0.747833913071916,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2101.11525v2",
+        "published": "2020-07-15"
+    },
+    {
+        "new_title": "ARIEL: Adversarial Graph Contrastive Learning",
+        "new_link": "http://arxiv.org/abs/2208.06956v2",
+        "new_summary": "  Contrastive learning is an effective unsupervised method in graph\nrepresentation learning, and the key component of contrastive learning lies in\nthe construction of positive and negative samples. Previous methods usually\nutilize the proximity of nodes in the graph as the principle. Recently, the\ndata-augmentation-based contrastive learning method has advanced to show great\npower in the visual domain, and some works extended this method from images to\ngraphs. However, unlike the data augmentation on images, the data augmentation\non graphs is far less intuitive and much harder to provide high-quality\ncontrastive samples, which leaves much space for improvement. In this work, by\nintroducing an adversarial graph view for data augmentation, we propose a\nsimple but effective method, Adversarial Graph Contrastive Learning (ARIEL), to\nextract informative contrastive samples within reasonable constraints. We\ndevelop a new technique called information regularization for stable training\nand use subgraph sampling for scalability. We generalize our method from\nnode-level contrastive learning to the graph level by treating each graph\ninstance as a super-node. ARIEL consistently outperforms the current graph\ncontrastive learning methods for both node-level and graph-level classification\ntasks on real-world datasets. We further demonstrate that ARIEL is more robust\nin the face of adversarial attacks.\n",
+        "pdf_link": "https://arxiv.org/pdf/2208.06956v2.pdf",
+        "similarity": 0.7091600381100156,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2101.11525v2",
+        "published": "2022-08-15"
+    },
+    {
+        "new_title": "A Primer on Contrastive Pretraining in Language Processing: Methods,\n  Lessons Learned and Perspectives",
+        "new_link": "http://arxiv.org/abs/2102.12982v1",
+        "new_summary": "  Modern natural language processing (NLP) methods employ self-supervised\npretraining objectives such as masked language modeling to boost the\nperformance of various application tasks. These pretraining methods are\nfrequently extended with recurrence, adversarial or linguistic property\nmasking, and more recently with contrastive learning objectives. Contrastive\nself-supervised training objectives enabled recent successes in image\nrepresentation pretraining by learning to contrast input-input pairs of\naugmented images as either similar or dissimilar. However, in NLP, automated\ncreation of text input augmentations is still very challenging because a single\ntoken can invert the meaning of a sentence. For this reason, some contrastive\nNLP pretraining methods contrast over input-label pairs, rather than over\ninput-input pairs, using methods from Metric Learning and Energy Based Models.\nIn this survey, we summarize recent self-supervised and supervised contrastive\nNLP pretraining methods and describe where they are used to improve language\nmodeling, few or zero-shot learning, pretraining data-efficiency and specific\nNLP end-tasks. We introduce key contrastive learning concepts with lessons\nlearned from prior research and structure works by applications and cross-field\nrelations. Finally, we point to open challenges and future directions for\ncontrastive NLP to encourage bringing contrastive NLP pretraining closer to\nrecent successes in image representation pretraining.\n",
+        "pdf_link": "https://arxiv.org/pdf/2102.12982v1.pdf",
+        "similarity": 0.7010385638126042,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2404.00225v1",
+        "published": "2021-02-25"
+    },
+    {
+        "new_title": "HCL: Improving Graph Representation with Hierarchical Contrastive\n  Learning",
+        "new_link": "http://arxiv.org/abs/2210.12020v1",
+        "new_summary": "  Contrastive learning has emerged as a powerful tool for graph representation\nlearning. However, most contrastive learning methods learn features of graphs\nwith fixed coarse-grained scale, which might underestimate either local or\nglobal information. To capture more hierarchical and richer representation, we\npropose a novel Hierarchical Contrastive Learning (HCL) framework that\nexplicitly learns graph representation in a hierarchical manner. Specifically,\nHCL includes two key components: a novel adaptive Learning to Pool (L2Pool)\nmethod to construct more reasonable multi-scale graph topology for more\ncomprehensive contrastive objective, a novel multi-channel pseudo-siamese\nnetwork to further enable more expressive learning of mutual information within\neach scale. Comprehensive experimental results show HCL achieves competitive\nperformance on 12 datasets involving node classification, node clustering and\ngraph classification. In addition, the visualization of learned representation\nreveals that HCL successfully captures meaningful characteristics of graphs.\n",
+        "pdf_link": "https://arxiv.org/pdf/2210.12020v1.pdf",
+        "similarity": 0.7251640731511793,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2101.11525v2",
+        "published": "2022-10-21"
+    },
+    {
+        "new_title": "Graph Contrastive Learning Meets Graph Meta Learning: A Unified Method\n  for Few-shot Node Tasks",
+        "new_link": "http://arxiv.org/abs/2309.10376v1",
+        "new_summary": "  Graph Neural Networks (GNNs) have become popular in Graph Representation\nLearning (GRL). One fundamental application is few-shot node classification.\nMost existing methods follow the meta learning paradigm, showing the ability of\nfast generalization to few-shot tasks. However, recent works indicate that\ngraph contrastive learning combined with fine-tuning can significantly\noutperform meta learning methods. Despite the empirical success, there is\nlimited understanding of the reasons behind it. In our study, we first identify\ntwo crucial advantages of contrastive learning compared to meta learning,\nincluding (1) the comprehensive utilization of graph nodes and (2) the power of\ngraph augmentations. To integrate the strength of both contrastive learning and\nmeta learning on the few-shot node classification tasks, we introduce a new\nparadigm: Contrastive Few-Shot Node Classification (COLA). Specifically, COLA\nemploys graph augmentations to identify semantically similar nodes, which\nenables the construction of meta-tasks without the need for label information.\nTherefore, COLA can utilize all nodes to construct meta-tasks, further reducing\nthe risk of overfitting. Through extensive experiments, we validate the\nessentiality of each component in our design and demonstrate that COLA achieves\nnew state-of-the-art on all tasks.\n",
+        "pdf_link": "https://arxiv.org/pdf/2309.10376v1.pdf",
+        "similarity": 0.7189844664640035,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2101.11525v2",
+        "published": "2023-09-19"
+    },
+    {
+        "new_title": "Bayesian Graph Contrastive Learning",
+        "new_link": "http://arxiv.org/abs/2112.07823v4",
+        "new_summary": "  Contrastive learning has become a key component of self-supervised learning\napproaches for graph-structured data. Despite their success, existing graph\ncontrastive learning methods are incapable of uncertainty quantification for\nnode representations or their downstream tasks, limiting their application in\nhigh-stakes domains. In this paper, we propose a novel Bayesian perspective of\ngraph contrastive learning methods showing random augmentations leads to\nstochastic encoders. As a result, our proposed method represents each node by a\ndistribution in the latent space in contrast to existing techniques which embed\neach node to a deterministic vector. By learning distributional\nrepresentations, we provide uncertainty estimates in downstream graph analytics\ntasks and increase the expressive power of the predictive model. In addition,\nwe propose a Bayesian framework to infer the probability of perturbations in\neach view of the contrastive model, eliminating the need for a computationally\nexpensive search for hyperparameter tuning. We empirically show a considerable\nimprovement in performance compared to existing state-of-the-art methods on\nseveral benchmark datasets.\n",
+        "pdf_link": "https://arxiv.org/pdf/2112.07823v4.pdf",
+        "similarity": 0.7091173231785841,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2101.11525v2",
+        "published": "2021-12-15"
+    },
+    {
+        "new_title": "Dual Contrastive Learning: Text Classification via Label-Aware Data\n  Augmentation",
+        "new_link": "http://arxiv.org/abs/2201.08702v1",
+        "new_summary": "  Contrastive learning has achieved remarkable success in representation\nlearning via self-supervision in unsupervised settings. However, effectively\nadapting contrastive learning to supervised learning tasks remains as a\nchallenge in practice. In this work, we introduce a dual contrastive learning\n(DualCL) framework that simultaneously learns the features of input samples and\nthe parameters of classifiers in the same space. Specifically, DualCL regards\nthe parameters of the classifiers as augmented samples associating to different\nlabels and then exploits the contrastive learning between the input samples and\nthe augmented samples. Empirical studies on five benchmark text classification\ndatasets and their low-resource version demonstrate the improvement in\nclassification accuracy and confirm the capability of learning discriminative\nrepresentations of DualCL.\n",
+        "pdf_link": "https://arxiv.org/pdf/2201.08702v1.pdf",
+        "similarity": 0.7057272696303574,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2404.00225v1",
+        "published": "2022-01-21"
+    },
+    {
+        "new_title": "Localized Contrastive Learning on Graphs",
+        "new_link": "http://arxiv.org/abs/2212.04604v1",
+        "new_summary": "  Contrastive learning methods based on InfoNCE loss are popular in node\nrepresentation learning tasks on graph-structured data. However, its reliance\non data augmentation and its quadratic computational complexity might lead to\ninconsistency and inefficiency problems. To mitigate these limitations, in this\npaper, we introduce a simple yet effective contrastive model named Localized\nGraph Contrastive Learning (Local-GCL in short). Local-GCL consists of two key\ndesigns: 1) We fabricate the positive examples for each node directly using its\nfirst-order neighbors, which frees our method from the reliance on\ncarefully-designed graph augmentations; 2) To improve the efficiency of\ncontrastive learning on graphs, we devise a kernelized contrastive loss, which\ncould be approximately computed in linear time and space complexity with\nrespect to the graph size. We provide theoretical analysis to justify the\neffectiveness and rationality of the proposed methods. Experiments on various\ndatasets with different scales and properties demonstrate that in spite of its\nsimplicity, Local-GCL achieves quite competitive performance in self-supervised\nnode representation learning tasks on graphs with various scales and\nproperties.\n",
+        "pdf_link": "https://arxiv.org/pdf/2212.04604v1.pdf",
+        "similarity": 0.7743095367656807,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2101.11525v2",
+        "published": "2022-12-08"
+    },
+    {
+        "new_title": "Capturing Fine-grained Semantics in Contrastive Graph Representation\n  Learning",
+        "new_link": "http://arxiv.org/abs/2304.11658v1",
+        "new_summary": "  Graph contrastive learning defines a contrastive task to pull similar\ninstances close and push dissimilar instances away. It learns discriminative\nnode embeddings without supervised labels, which has aroused increasing\nattention in the past few years. Nevertheless, existing methods of graph\ncontrastive learning ignore the differences between diverse semantics existed\nin graphs, which learn coarse-grained node embeddings and lead to sub-optimal\nperformances on downstream tasks. To bridge this gap, we propose a novel\nFine-grained Semantics enhanced Graph Contrastive Learning (FSGCL) in this\npaper. Concretely, FSGCL first introduces a motif-based graph construction,\nwhich employs graph motifs to extract diverse semantics existed in graphs from\nthe perspective of input data. Then, the semantic-level contrastive task is\nexplored to further enhance the utilization of fine-grained semantics from the\nperspective of model training. Experiments on five real-world datasets\ndemonstrate the superiority of our proposed FSGCL over state-of-the-art\nmethods. To make the results reproducible, we will make our codes public on\nGitHub after this paper is accepted.\n",
+        "pdf_link": "https://arxiv.org/pdf/2304.11658v1.pdf",
+        "similarity": 0.7089364355444974,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2101.11525v2",
+        "published": "2023-04-23"
+    },
+    {
+        "new_title": "Non-contrastive sentence representations via self-supervision",
+        "new_link": "http://arxiv.org/abs/2310.17690v1",
+        "new_summary": "  Sample contrastive methods, typically referred to simply as contrastive are\nthe foundation of most unsupervised methods to learn text and sentence\nembeddings. On the other hand, a different class of self-supervised loss\nfunctions and methods have been considered in the computer vision community and\nreferred to as dimension contrastive. In this paper, we thoroughly compare this\nclass of methods with the standard baseline for contrastive sentence\nembeddings, SimCSE. We find that self-supervised embeddings trained using\ndimension contrastive objectives can outperform SimCSE on downstream tasks\nwithout needing auxiliary loss functions.\n",
+        "pdf_link": "https://arxiv.org/pdf/2310.17690v1.pdf",
+        "similarity": 0.7206050593556799,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2404.00225v1",
+        "published": "2023-10-26"
+    },
+    {
+        "new_title": "Eliciting Structural and Semantic Global Knowledge in Unsupervised Graph\n  Contrastive Learning",
+        "new_link": "http://arxiv.org/abs/2202.08480v3",
+        "new_summary": "  Graph Contrastive Learning (GCL) has recently drawn much research interest\nfor learning generalizable node representations in a self-supervised manner. In\ngeneral, the contrastive learning process in GCL is performed on top of the\nrepresentations learned by a graph neural network (GNN) backbone, which\ntransforms and propagates the node contextual information based on its local\nneighborhoods. However, nodes sharing similar characteristics may not always be\ngeographically close, which poses a great challenge for unsupervised GCL\nefforts due to their inherent limitations in capturing such global graph\nknowledge. In this work, we address their inherent limitations by proposing a\nsimple yet effective framework -- Simple Neural Networks with Structural and\nSemantic Contrastive Learning} (S^3-CL). Notably, by virtue of the proposed\nstructural and semantic contrastive learning algorithms, even a simple neural\nnetwork can learn expressive node representations that preserve valuable global\nstructural and semantic patterns. Our experiments demonstrate that the node\nrepresentations learned by S^3-CL achieve superior performance on different\ndownstream tasks compared with the state-of-the-art unsupervised GCL methods.\nImplementation and more experimental details are publicly available at\n\\url{https://github.com/kaize0409/S-3-CL.}\n",
+        "pdf_link": "https://arxiv.org/pdf/2202.08480v3.pdf",
+        "similarity": 0.7642296539320308,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2101.11525v2",
+        "published": "2022-02-17"
+    },
+    {
+        "new_title": "Simple and Asymmetric Graph Contrastive Learning without Augmentations",
+        "new_link": "http://arxiv.org/abs/2310.18884v3",
+        "new_summary": "  Graph Contrastive Learning (GCL) has shown superior performance in\nrepresentation learning in graph-structured data. Despite their success, most\nexisting GCL methods rely on prefabricated graph augmentation and homophily\nassumptions. Thus, they fail to generalize well to heterophilic graphs where\nconnected nodes may have different class labels and dissimilar features. In\nthis paper, we study the problem of conducting contrastive learning on\nhomophilic and heterophilic graphs. We find that we can achieve promising\nperformance simply by considering an asymmetric view of the neighboring nodes.\nThe resulting simple algorithm, Asymmetric Contrastive Learning for Graphs\n(GraphACL), is easy to implement and does not rely on graph augmentations and\nhomophily assumptions. We provide theoretical and empirical evidence that\nGraphACL can capture one-hop local neighborhood information and two-hop\nmonophily similarity, which are both important for modeling heterophilic\ngraphs. Experimental results show that the simple GraphACL significantly\noutperforms state-of-the-art graph contrastive learning and self-supervised\nlearning methods on homophilic and heterophilic graphs. The code of GraphACL is\navailable at https://github.com/tengxiao1/GraphACL.\n",
+        "pdf_link": "https://arxiv.org/pdf/2310.18884v3.pdf",
+        "similarity": 0.7246943429822937,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2101.11525v2",
+        "published": "2023-10-29"
+    },
+    {
+        "new_title": "When Do Contrastive Learning Signals Help Spatio-Temporal Graph\n  Forecasting?",
+        "new_link": "http://arxiv.org/abs/2108.11873v2",
+        "new_summary": "  Deep learning models are modern tools for spatio-temporal graph (STG)\nforecasting. Though successful, we argue that data scarcity is a key factor\nlimiting their recent improvements. Meanwhile, contrastive learning has been an\neffective method for providing self-supervision signals and addressing data\nscarcity in various domains. In view of this, one may ask: can we leverage the\nadditional signals from contrastive learning to alleviate data scarcity, so as\nto benefit STG forecasting? To answer this question, we present the first\nsystematic exploration on incorporating contrastive learning into STG\nforecasting. Specifically, we first elaborate two potential schemes for\nintegrating contrastive learning. We then propose two feasible and efficient\ndesigns of contrastive tasks that are performed on the node or graph level. The\nempirical study on STG benchmarks demonstrates that integrating graph-level\ncontrast with the joint learning scheme achieves the best performance. In\naddition, we introduce four augmentations for STG data, which perturb the data\nin terms of graph structure, time domain, and frequency domain. Experimental\nresults reveal that the model is not sensitive to the proposed augmentations'\nsemantics. Lastly, we extend the classic contrastive loss via a rule-based\nstrategy that filters out the most semantically similar negatives, yielding\nperformance gains. We also provide explanations and insights based on the above\nexperimental findings. Code is available at https://github.com/liuxu77/STGCL.\n",
+        "pdf_link": "https://arxiv.org/pdf/2108.11873v2.pdf",
+        "similarity": 0.7122867065515253,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2101.11525v2",
+        "published": "2021-08-26"
+    },
+    {
+        "new_title": "MoCL: Data-driven Molecular Fingerprint via Knowledge-aware Contrastive\n  Learning from Molecular Graph",
+        "new_link": "http://arxiv.org/abs/2106.04509v2",
+        "new_summary": "  Recent years have seen a rapid growth of utilizing graph neural networks\n(GNNs) in the biomedical domain for tackling drug-related problems. However,\nlike any other deep architectures, GNNs are data hungry. While requiring labels\nin real world is often expensive, pretraining GNNs in an unsupervised manner\nhas been actively explored. Among them, graph contrastive learning, by\nmaximizing the mutual information between paired graph augmentations, has been\nshown to be effective on various downstream tasks. However, the current graph\ncontrastive learning framework has two limitations. First, the augmentations\nare designed for general graphs and thus may not be suitable or powerful enough\nfor certain domains. Second, the contrastive scheme only learns representations\nthat are invariant to local perturbations and thus does not consider the global\nstructure of the dataset, which may also be useful for downstream tasks.\nTherefore, in this paper, we study graph contrastive learning in the context of\nbiomedical domain, where molecular graphs are present. We propose a novel\nframework called MoCL, which utilizes domain knowledge at both local- and\nglobal-level to assist representation learning. The local-level domain\nknowledge guides the augmentation process such that variation is introduced\nwithout changing graph semantics. The global-level knowledge encodes the\nsimilarity information between graphs in the entire dataset and helps to learn\nrepresentations with richer semantics. The entire model is learned through a\ndouble contrast objective. We evaluate MoCL on various molecular datasets under\nboth linear and semi-supervised settings and results show that MoCL achieves\nstate-of-the-art performance.\n",
+        "pdf_link": "https://arxiv.org/pdf/2106.04509v2.pdf",
+        "similarity": 0.7084221518199297,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2101.11525v2",
+        "published": "2021-06-05"
+    },
+    {
+        "new_title": "Unifying Graph Contrastive Learning via Graph Message Augmentation",
+        "new_link": "http://arxiv.org/abs/2401.03638v1",
+        "new_summary": "  Graph contrastive learning is usually performed by first conducting Graph\nData Augmentation (GDA) and then employing a contrastive learning pipeline to\ntrain GNNs. As we know that GDA is an important issue for graph contrastive\nlearning. Various GDAs have been developed recently which mainly involve\ndropping or perturbing edges, nodes, node attributes and edge attributes.\nHowever, to our knowledge, it still lacks a universal and effective augmentor\nthat is suitable for different types of graph data. To address this issue, in\nthis paper, we first introduce the graph message representation of graph data.\nBased on it, we then propose a novel Graph Message Augmentation (GMA), a\nuniversal scheme for reformulating many existing GDAs. The proposed unified GMA\nnot only gives a new perspective to understand many existing GDAs but also\nprovides a universal and more effective graph data augmentation for graph\nself-supervised learning tasks. Moreover, GMA introduces an easy way to\nimplement the mixup augmentor which is natural for images but usually\nchallengeable for graphs. Based on the proposed GMA, we then propose a unified\ngraph contrastive learning, termed Graph Message Contrastive Learning (GMCL),\nthat employs attribution-guided universal GMA for graph contrastive learning.\nExperiments on many graph learning tasks demonstrate the effectiveness and\nbenefits of the proposed GMA and GMCL approaches.\n",
+        "pdf_link": "https://arxiv.org/pdf/2401.03638v1.pdf",
+        "similarity": 0.7182542408326529,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2101.11525v2",
+        "published": "2024-01-08"
+    },
+    {
+        "new_title": "How does Contrastive Learning Organize Images?",
+        "new_link": "http://arxiv.org/abs/2305.10229v2",
+        "new_summary": "  Contrastive learning, a dominant self-supervised technique, emphasizes\nsimilarity in representations between augmentations of the same input and\ndissimilarity for different ones. Although low contrastive loss often\ncorrelates with high classification accuracy, recent studies challenge this\ndirect relationship, spotlighting the crucial role of inductive biases. We\ndelve into these biases from a clustering viewpoint, noting that contrastive\nlearning creates locally dense clusters, contrasting the globally dense\nclusters from supervised learning. To capture this discrepancy, we introduce\nthe \"RLD (Relative Local Density)\" metric. While this cluster property can\nhinder linear classification accuracy, leveraging a Graph Convolutional Network\n(GCN) based classifier mitigates this, boosting accuracy and reducing parameter\nrequirements. The code is available\n\\href{https://github.com/xsgxlz/How-does-Contrastive-Learning-Organize-Images/tree/main}{here}.\n",
+        "pdf_link": "https://arxiv.org/pdf/2305.10229v2.pdf",
+        "similarity": 0.7476915171047729,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2101.11525v2",
+        "published": "2023-05-17"
+    },
+    {
+        "new_title": "CHGNN: A Semi-Supervised Contrastive Hypergraph Learning Network",
+        "new_link": "http://arxiv.org/abs/2303.06213v2",
+        "new_summary": "  Hypergraphs can model higher-order relationships among data objects that are\nfound in applications such as social networks and bioinformatics. However,\nrecent studies on hypergraph learning that extend graph convolutional networks\nto hypergraphs cannot learn effectively from features of unlabeled data. To\nsuch learning, we propose a contrastive hypergraph neural network, CHGNN, that\nexploits self-supervised contrastive learning techniques to learn from labeled\nand unlabeled data. First, CHGNN includes an adaptive hypergraph view generator\nthat adopts an auto-augmentation strategy and learns a perturbed probability\ndistribution of minimal sufficient views. Second, CHGNN encompasses an improved\nhypergraph encoder that considers hyperedge homogeneity to fuse information\neffectively. Third, CHGNN is equipped with a joint loss function that combines\na similarity loss for the view generator, a node classification loss, and a\nhyperedge homogeneity loss to inject supervision signals. It also includes\nbasic and cross-validation contrastive losses, associated with an enhanced\ncontrastive loss training process. Experimental results on nine real datasets\noffer insight into the effectiveness of CHGNN, showing that it outperforms 13\ncompetitors in terms of classification accuracy consistently.\n",
+        "pdf_link": "https://arxiv.org/pdf/2303.06213v2.pdf",
+        "similarity": 0.7349075751462832,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2101.11525v2",
+        "published": "2023-03-10"
+    },
+    {
+        "new_title": "SEGA: Structural Entropy Guided Anchor View for Graph Contrastive\n  Learning",
+        "new_link": "http://arxiv.org/abs/2305.04501v2",
+        "new_summary": "  In contrastive learning, the choice of ``view'' controls the information that\nthe representation captures and influences the performance of the model.\nHowever, leading graph contrastive learning methods generally produce views via\nrandom corruption or learning, which could lead to the loss of essential\ninformation and alteration of semantic information. An anchor view that\nmaintains the essential information of input graphs for contrastive learning\nhas been hardly investigated. In this paper, based on the theory of graph\ninformation bottleneck, we deduce the definition of this anchor view; put\ndifferently, \\textit{the anchor view with essential information of input graph\nis supposed to have the minimal structural uncertainty}. Furthermore, guided by\nstructural entropy, we implement the anchor view, termed \\textbf{SEGA}, for\ngraph contrastive learning. We extensively validate the proposed anchor view on\nvarious benchmarks regarding graph classification under unsupervised,\nsemi-supervised, and transfer learning and achieve significant performance\nboosts compared to the state-of-the-art methods.\n",
+        "pdf_link": "https://arxiv.org/pdf/2305.04501v2.pdf",
+        "similarity": 0.704079833383924,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2101.11525v2",
+        "published": "2023-05-08"
+    },
+    {
+        "new_title": "Smoothed Graph Contrastive Learning via Seamless Proximity Integration",
+        "new_link": "http://arxiv.org/abs/2402.15270v1",
+        "new_summary": "  Graph contrastive learning (GCL) aligns node representations by classifying\nnode pairs into positives and negatives using a selection process that\ntypically relies on establishing correspondences within two augmented graphs.\nThe conventional GCL approaches incorporate negative samples uniformly in the\ncontrastive loss, resulting in the equal treatment negative nodes, regardless\nof their proximity to the true positive. In this paper, we present a Smoothed\nGraph Contrastive Learning model (SGCL), which leverages the geometric\nstructure of augmented graphs to inject proximity information associated with\npositive/negative pairs in the contrastive loss, thus significantly\nregularizing the learning process. The proposed SGCL adjusts the penalties\nassociated with node pairs in the contrastive loss by incorporating three\ndistinct smoothing techniques that result in proximity aware positives and\nnegatives. To enhance scalability for large-scale graphs, the proposed\nframework incorporates a graph batch-generating strategy that partitions the\ngiven graphs into multiple subgraphs, facilitating efficient training in\nseparate batches. Through extensive experimentation in the unsupervised setting\non various benchmarks, particularly those of large scale, we demonstrate the\nsuperiority of our proposed framework against recent baselines.\n",
+        "pdf_link": "https://arxiv.org/pdf/2402.15270v1.pdf",
+        "similarity": 0.752541568921565,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2101.11525v2",
+        "published": "2024-02-23"
+    },
+    {
+        "new_title": "NCAGC: A Neighborhood Contrast Framework for Attributed Graph Clustering",
+        "new_link": "http://arxiv.org/abs/2206.07897v2",
+        "new_summary": "  Attributed graph clustering is one of the most fundamental tasks among graph\nlearning field, the goal of which is to group nodes with similar\nrepresentations into the same cluster without human annotations. Recent studies\nbased on graph contrastive learning method have achieved remarkable results\nwhen exploit graph-structured data. However, most existing methods 1) do not\ndirectly address the clustering task, since the representation learning and\nclustering process are separated; 2) depend too much on data augmentation,\nwhich greatly limits the capability of contrastive learning; 3) ignore the\ncontrastive message for clustering tasks, which adversely degenerate the\nclustering results. In this paper, we propose a Neighborhood Contrast Framework\nfor Attributed Graph Clustering, namely NCAGC, seeking for conquering the\naforementioned limitations. Specifically, by leveraging the Neighborhood\nContrast Module, the representation of neighbor nodes will be 'push closer' and\nbecome clustering-oriented with the neighborhood contrast loss. Moreover, a\nContrastive Self-Expression Module is built by minimizing the node\nrepresentation before and after the self-expression layer to constraint the\nlearning of self-expression matrix. All the modules of NCAGC are optimized in a\nunified framework, so the learned node representation contains\nclustering-oriented messages. Extensive experimental results on four attributed\ngraph datasets demonstrate the promising performance of NCAGC compared with 16\nstate-of-the-art clustering methods. The code is available at\nhttps://github.com/wangtong627/NCAGC.\n",
+        "pdf_link": "https://arxiv.org/pdf/2206.07897v2.pdf",
+        "similarity": 0.7544392655938212,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2101.11525v2",
+        "published": "2022-06-16"
+    },
+    {
+        "new_title": "Provable Guarantees for Self-Supervised Deep Learning with Spectral\n  Contrastive Loss",
+        "new_link": "http://arxiv.org/abs/2106.04156v7",
+        "new_summary": "  Recent works in self-supervised learning have advanced the state-of-the-art\nby relying on the contrastive learning paradigm, which learns representations\nby pushing positive pairs, or similar examples from the same class, closer\ntogether while keeping negative pairs far apart. Despite the empirical\nsuccesses, theoretical foundations are limited -- prior analyses assume\nconditional independence of the positive pairs given the same class label, but\nrecent empirical applications use heavily correlated positive pairs (i.e., data\naugmentations of the same image). Our work analyzes contrastive learning\nwithout assuming conditional independence of positive pairs using a novel\nconcept of the augmentation graph on data. Edges in this graph connect\naugmentations of the same data, and ground-truth classes naturally form\nconnected sub-graphs. We propose a loss that performs spectral decomposition on\nthe population augmentation graph and can be succinctly written as a\ncontrastive learning objective on neural net representations. Minimizing this\nobjective leads to features with provable accuracy guarantees under linear\nprobe evaluation. By standard generalization bounds, these accuracy guarantees\nalso hold when minimizing the training contrastive loss. Empirically, the\nfeatures learned by our objective can match or outperform several strong\nbaselines on benchmark vision datasets. In all, this work provides the first\nprovable analysis for contrastive learning where guarantees for linear probe\nevaluation can apply to realistic empirical settings.\n",
+        "pdf_link": "https://arxiv.org/pdf/2106.04156v7.pdf",
+        "similarity": 0.7069570300338796,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2101.11525v2",
+        "published": "2021-06-08"
+    },
+    {
+        "new_title": "Learning the Unlearned: Mitigating Feature Suppression in Contrastive\n  Learning",
+        "new_link": "http://arxiv.org/abs/2402.11816v3",
+        "new_summary": "  Self-Supervised Contrastive Learning has proven effective in deriving\nhigh-quality representations from unlabeled data. However, a major challenge\nthat hinders both unimodal and multimodal contrastive learning is feature\nsuppression, a phenomenon where the trained model captures only a limited\nportion of the information from the input data while overlooking other\npotentially valuable content. This issue often leads to indistinguishable\nrepresentations for visually similar but semantically different inputs,\nadversely affecting downstream task performance, particularly those requiring\nrigorous semantic comprehension. To address this challenge, we propose a novel\nmodel-agnostic Multistage Contrastive Learning (MCL) framework. Unlike standard\ncontrastive learning which inherently captures one single biased feature\ndistribution, MCL progressively learns previously unlearned features through\nfeature-aware negative sampling at each stage, where the negative samples of an\nanchor are exclusively selected from the cluster it was assigned to in\npreceding stages. Meanwhile, MCL preserves the previously well-learned features\nby cross-stage representation integration, integrating features across all\nstages to form final representations. Our comprehensive evaluation demonstrates\nMCL's effectiveness and superiority across both unimodal and multimodal\ncontrastive learning, spanning a range of model architectures from ResNet to\nVision Transformers (ViT). Remarkably, in tasks where the original CLIP model\nhas shown limitations, MCL dramatically enhances performance, with improvements\nup to threefold on specific attributes in the recently proposed MMVP benchmark.\n",
+        "pdf_link": "https://arxiv.org/pdf/2402.11816v3.pdf",
+        "similarity": 0.7330539522733049,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2404.00225v1",
+        "published": "2024-02-19"
+    },
+    {
+        "new_title": "Label Anchored Contrastive Learning for Language Understanding",
+        "new_link": "http://arxiv.org/abs/2205.10227v1",
+        "new_summary": "  Contrastive learning (CL) has achieved astonishing progress in computer\nvision, speech, and natural language processing fields recently with\nself-supervised learning. However, CL approach to the supervised setting is not\nfully explored, especially for the natural language understanding\nclassification task. Intuitively, the class label itself has the intrinsic\nability to perform hard positive/negative mining, which is crucial for CL.\nMotivated by this, we propose a novel label anchored contrastive learning\napproach (denoted as LaCon) for language understanding. Specifically, three\ncontrastive objectives are devised, including a multi-head instance-centered\ncontrastive loss (ICL), a label-centered contrastive loss (LCL), and a label\nembedding regularizer (LER). Our approach does not require any specialized\nnetwork architecture or any extra data augmentation, thus it can be easily\nplugged into existing powerful pre-trained language models. Compared to the\nstate-of-the-art baselines, LaCon obtains up to 4.1% improvement on the popular\ndatasets of GLUE and CLUE benchmarks. Besides, LaCon also demonstrates\nsignificant advantages under the few-shot and data imbalance settings, which\nobtains up to 9.4% improvement on the FewGLUE and FewCLUE benchmarking tasks.\n",
+        "pdf_link": "https://arxiv.org/pdf/2205.10227v1.pdf",
+        "similarity": 0.708163926094699,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2404.00225v1",
+        "published": "2022-04-26"
+    },
+    {
+        "new_title": "Supervision Accelerates Pre-training in Contrastive Semi-Supervised\n  Learning of Visual Representations",
+        "new_link": "http://arxiv.org/abs/2006.10803v2",
+        "new_summary": "  We investigate a strategy for improving the efficiency of contrastive\nlearning of visual representations by leveraging a small amount of supervised\ninformation during pre-training. We propose a semi-supervised loss, SuNCEt,\nbased on noise-contrastive estimation and neighbourhood component analysis,\nthat aims to distinguish examples of different classes in addition to the\nself-supervised instance-wise pretext tasks. On ImageNet, we find that SuNCEt\ncan be used to match the semi-supervised learning accuracy of previous\ncontrastive approaches while using less than half the amount of pre-training\nand compute. Our main insight is that leveraging even a small amount of labeled\ndata during pre-training, and not only during fine-tuning, provides an\nimportant signal that can significantly accelerate contrastive learning of\nvisual representations. Our code is available online at\ngithub.com/facebookresearch/suncet.\n",
+        "pdf_link": "https://arxiv.org/pdf/2006.10803v2.pdf",
+        "similarity": 0.7081300799583692,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2404.00225v1",
+        "published": "2020-06-18"
+    },
+    {
+        "new_title": "ACTIVE:Augmentation-Free Graph Contrastive Learning for Partial\n  Multi-View Clustering",
+        "new_link": "http://arxiv.org/abs/2203.00186v1",
+        "new_summary": "  In this paper, we propose an augmentation-free graph contrastive learning\nframework, namely ACTIVE, to solve the problem of partial multi-view\nclustering. Notably, we suppose that the representations of similar samples\n(i.e., belonging to the same cluster) and their multiply views features should\nbe similar. This is distinct from the general unsupervised contrastive learning\nthat assumes an image and its augmentations share a similar representation.\nSpecifically, relation graphs are constructed using the nearest neighbours to\nidentify existing similar samples, then the constructed inter-instance relation\ngraphs are transferred to the missing views to build graphs on the\ncorresponding missing data. Subsequently, two main components, within-view\ngraph contrastive learning (WGC) and cross-view graph consistency learning\n(CGC), are devised to maximize the mutual information of different views within\na cluster. The proposed approach elevates instance-level contrastive learning\nand missing data inference to the cluster-level, effectively mitigating the\nimpact of individual missing data on clustering. Experiments on several\nchallenging datasets demonstrate the superiority of our proposed methods.\n",
+        "pdf_link": "https://arxiv.org/pdf/2203.00186v1.pdf",
+        "similarity": 0.7120427981827193,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2101.11525v2",
+        "published": "2022-03-01"
+    },
+    {
+        "new_title": "Subgraph Networks Based Contrastive Learning",
+        "new_link": "http://arxiv.org/abs/2306.03506v2",
+        "new_summary": "  Graph contrastive learning (GCL), as a self-supervised learning method, can\nsolve the problem of annotated data scarcity. It mines explicit features in\nunannotated graphs to generate favorable graph representations for downstream\ntasks. Most existing GCL methods focus on the design of graph augmentation\nstrategies and mutual information estimation operations. Graph augmentation\nproduces augmented views by graph perturbations. These views preserve a locally\nsimilar structure and exploit explicit features. However, these methods have\nnot considered the interaction existing in subgraphs. To explore the impact of\nsubstructure interactions on graph representations, we propose a novel\nframework called subgraph network-based contrastive learning (SGNCL). SGNCL\napplies a subgraph network generation strategy to produce augmented views. This\nstrategy converts the original graph into an Edge-to-Node mapping network with\nboth topological and attribute features. The single-shot augmented view is a\nfirst-order subgraph network that mines the interaction between nodes,\nnode-edge, and edges. In addition, we also investigate the impact of the\nsecond-order subgraph augmentation on mining graph structure interactions, and\nfurther, propose a contrastive objective that fuses the first-order and\nsecond-order subgraph information. We compare SGNCL with classical and\nstate-of-the-art graph contrastive learning methods on multiple benchmark\ndatasets of different domains. Extensive experiments show that SGNCL achieves\ncompetitive or better performance (top three) on all datasets in unsupervised\nlearning settings. Furthermore, SGNCL achieves the best average gain of 6.9\\%\nin transfer learning compared to the best method. Finally, experiments also\ndemonstrate that mining substructure interactions have positive implications\nfor graph contrastive learning.\n",
+        "pdf_link": "https://arxiv.org/pdf/2306.03506v2.pdf",
+        "similarity": 0.7125062094351301,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2101.11525v2",
+        "published": "2023-06-06"
+    },
+    {
+        "new_title": "Architecture Matters: Uncovering Implicit Mechanisms in Graph\n  Contrastive Learning",
+        "new_link": "http://arxiv.org/abs/2311.02687v1",
+        "new_summary": "  With the prosperity of contrastive learning for visual representation\nlearning (VCL), it is also adapted to the graph domain and yields promising\nperformance. However, through a systematic study of various graph contrastive\nlearning (GCL) methods, we observe that some common phenomena among existing\nGCL methods that are quite different from the original VCL methods, including\n1) positive samples are not a must for GCL; 2) negative samples are not\nnecessary for graph classification, neither for node classification when\nadopting specific normalization modules; 3) data augmentations have much less\ninfluence on GCL, as simple domain-agnostic augmentations (e.g., Gaussian\nnoise) can also attain fairly good performance. By uncovering how the implicit\ninductive bias of GNNs works in contrastive learning, we theoretically provide\ninsights into the above intriguing properties of GCL. Rather than directly\nporting existing VCL methods to GCL, we advocate for more attention toward the\nunique architecture of graph learning and consider its implicit influence when\ndesigning GCL methods. Code is available at https:\n//github.com/PKU-ML/ArchitectureMattersGCL.\n",
+        "pdf_link": "https://arxiv.org/pdf/2311.02687v1.pdf",
+        "similarity": 0.7182834719895248,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2101.11525v2",
+        "published": "2023-11-05"
+    },
+    {
+        "new_title": "Adversarial Curriculum Graph Contrastive Learning with Pair-wise\n  Augmentation",
+        "new_link": "http://arxiv.org/abs/2402.10468v1",
+        "new_summary": "  Graph contrastive learning (GCL) has emerged as a pivotal technique in the\ndomain of graph representation learning. A crucial aspect of effective GCL is\nthe caliber of generated positive and negative samples, which is intrinsically\ndictated by their resemblance to the original data. Nevertheless, precise\ncontrol over similarity during sample generation presents a formidable\nchallenge, often impeding the effective discovery of representative graph\npatterns. To address this challenge, we propose an innovative framework:\nAdversarial Curriculum Graph Contrastive Learning (ACGCL), which capitalizes on\nthe merits of pair-wise augmentation to engender graph-level positive and\nnegative samples with controllable similarity, alongside subgraph contrastive\nlearning to discern effective graph patterns therein. Within the ACGCL\nframework, we have devised a novel adversarial curriculum training methodology\nthat facilitates progressive learning by sequentially increasing the difficulty\nof distinguishing the generated samples. Notably, this approach transcends the\nprevalent sparsity issue inherent in conventional curriculum learning\nstrategies by adaptively concentrating on more challenging training data.\nFinally, a comprehensive assessment of ACGCL is conducted through extensive\nexperiments on six well-known benchmark datasets, wherein ACGCL conspicuously\nsurpasses a set of state-of-the-art baselines.\n",
+        "pdf_link": "https://arxiv.org/pdf/2402.10468v1.pdf",
+        "similarity": 0.7033041983428562,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2101.11525v2",
+        "published": "2024-02-16"
+    },
+    {
+        "new_title": "Heterogeneous Graph Neural Networks using Self-supervised Reciprocally\n  Contrastive Learning",
+        "new_link": "http://arxiv.org/abs/2205.00256v2",
+        "new_summary": "  Heterogeneous graph neural network (HGNN) is a very popular technique for the\nmodeling and analysis of heterogeneous graphs. Most existing HGNN-based\napproaches are supervised or semi-supervised learning methods requiring graphs\nto be annotated, which is costly and time-consuming. Self-supervised\ncontrastive learning has been proposed to address the problem of requiring\nannotated data by mining intrinsic information hidden within the given data.\nHowever, the existing contrastive learning methods are inadequate for\nheterogeneous graphs because they construct contrastive views only based on\ndata perturbation or pre-defined structural properties (e.g., meta-path) in\ngraph data while ignore the noises that may exist in both node attributes and\ngraph topologies. We develop for the first time a novel and robust\nheterogeneous graph contrastive learning approach, namely HGCL, which\nintroduces two views on respective guidance of node attributes and graph\ntopologies and integrates and enhances them by reciprocally contrastive\nmechanism to better model heterogeneous graphs. In this new approach, we adopt\ndistinct but most suitable attribute and topology fusion mechanisms in the two\nviews, which are conducive to mining relevant information in attributes and\ntopologies separately. We further use both attribute similarity and topological\ncorrelation to construct high-quality contrastive samples. Extensive\nexperiments on three large real-world heterogeneous graphs demonstrate the\nsuperiority and robustness of HGCL over state-of-the-art methods.\n",
+        "pdf_link": "https://arxiv.org/pdf/2205.00256v2.pdf",
+        "similarity": 0.7174274499096714,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2101.11525v2",
+        "published": "2022-04-30"
+    },
+    {
+        "new_title": "Rethinking Minimal Sufficient Representation in Contrastive Learning",
+        "new_link": "http://arxiv.org/abs/2203.07004v2",
+        "new_summary": "  Contrastive learning between different views of the data achieves outstanding\nsuccess in the field of self-supervised representation learning and the learned\nrepresentations are useful in broad downstream tasks. Since all supervision\ninformation for one view comes from the other view, contrastive learning\napproximately obtains the minimal sufficient representation which contains the\nshared information and eliminates the non-shared information between views.\nConsidering the diversity of the downstream tasks, it cannot be guaranteed that\nall task-relevant information is shared between views. Therefore, we assume the\nnon-shared task-relevant information cannot be ignored and theoretically prove\nthat the minimal sufficient representation in contrastive learning is not\nsufficient for the downstream tasks, which causes performance degradation. This\nreveals a new problem that the contrastive learning models have the risk of\nover-fitting to the shared information between views. To alleviate this\nproblem, we propose to increase the mutual information between the\nrepresentation and input as regularization to approximately introduce more\ntask-relevant information, since we cannot utilize any downstream task\ninformation during training. Extensive experiments verify the rationality of\nour analysis and the effectiveness of our method. It significantly improves the\nperformance of several classic contrastive learning models in downstream tasks.\nOur code is available at https://github.com/Haoqing-Wang/InfoCL.\n",
+        "pdf_link": "https://arxiv.org/pdf/2203.07004v2.pdf",
+        "similarity": 0.7343373001581917,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2404.00225v1",
+        "published": "2022-03-14"
+    },
+    {
+        "new_title": "Perfect Alignment May be Poisonous to Graph Contrastive Learning",
+        "new_link": "http://arxiv.org/abs/2310.03977v2",
+        "new_summary": "  Graph Contrastive Learning (GCL) aims to learn node representations by\naligning positive pairs and separating negative ones. However, few of\nresearchers have focused on the inner law behind specific augmentations used in\ngraph-based learning. What kind of augmentation will help downstream\nperformance, how does contrastive learning actually influence downstream tasks,\nand why the magnitude of augmentation matters so much? This paper seeks to\naddress these questions by establishing a connection between augmentation and\ndownstream performance. Our findings reveal that GCL contributes to downstream\ntasks mainly by separating different classes rather than gathering nodes of the\nsame class. So perfect alignment and augmentation overlap which draw all\nintra-class samples the same can not fully explain the success of contrastive\nlearning. Therefore, in order to understand how augmentation aids the\ncontrastive learning process, we conduct further investigations into the\ngeneralization, finding that perfect alignment that draw positive pair the same\ncould help contrastive loss but is poisonous to generalization, as a result,\nperfect alignment may not lead to best downstream performance, so specifically\ndesigned augmentation is needed to achieve appropriate alignment performance\nand improve downstream accuracy. We further analyse the result by information\ntheory and graph spectrum theory and propose two simple but effective methods\nto verify the theories. The two methods could be easily applied to various GCL\nalgorithms and extensive experiments are conducted to prove its effectiveness.\nThe code is available at https://github.com/somebodyhh1/GRACEIS\n",
+        "pdf_link": "https://arxiv.org/pdf/2310.03977v2.pdf",
+        "similarity": 0.7409195027405604,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2101.11525v2",
+        "published": "2023-10-06"
+    },
+    {
+        "new_title": "Deep Graph Contrastive Representation Learning",
+        "new_link": "http://arxiv.org/abs/2006.04131v2",
+        "new_summary": "  Graph representation learning nowadays becomes fundamental in analyzing\ngraph-structured data. Inspired by recent success of contrastive methods, in\nthis paper, we propose a novel framework for unsupervised graph representation\nlearning by leveraging a contrastive objective at the node level. Specifically,\nwe generate two graph views by corruption and learn node representations by\nmaximizing the agreement of node representations in these two views. To provide\ndiverse node contexts for the contrastive objective, we propose a hybrid scheme\nfor generating graph views on both structure and attribute levels. Besides, we\nprovide theoretical justification behind our motivation from two perspectives,\nmutual information and the classical triplet loss. We perform empirical\nexperiments on both transductive and inductive learning tasks using a variety\nof real-world datasets. Experimental experiments demonstrate that despite its\nsimplicity, our proposed method consistently outperforms existing\nstate-of-the-art methods by large margins. Moreover, our unsupervised method\neven surpasses its supervised counterparts on transductive tasks, demonstrating\nits great potential in real-world applications.\n",
+        "pdf_link": "https://arxiv.org/pdf/2006.04131v2.pdf",
+        "similarity": 0.701557220062303,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2101.11525v2",
+        "published": "2020-06-07"
+    },
+    {
+        "new_title": "Heterogeneous Contrastive Learning: Encoding Spatial Information for\n  Compact Visual Representations",
+        "new_link": "http://arxiv.org/abs/2011.09941v1",
+        "new_summary": "  Contrastive learning has achieved great success in self-supervised visual\nrepresentation learning, but existing approaches mostly ignored spatial\ninformation which is often crucial for visual representation. This paper\npresents heterogeneous contrastive learning (HCL), an effective approach that\nadds spatial information to the encoding stage to alleviate the learning\ninconsistency between the contrastive objective and strong data augmentation\noperations. We demonstrate the effectiveness of HCL by showing that (i) it\nachieves higher accuracy in instance discrimination and (ii) it surpasses\nexisting pre-training methods in a series of downstream tasks while shrinking\nthe pre-training costs by half. More importantly, we show that our approach\nachieves higher efficiency in visual representations, and thus delivers a key\nmessage to inspire the future research of self-supervised visual representation\nlearning.\n",
+        "pdf_link": "https://arxiv.org/pdf/2011.09941v1.pdf",
+        "similarity": 0.7162339041246473,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2404.00225v1",
+        "published": "2020-11-19"
+    },
+    {
+        "new_title": "Graph Contrastive Learning with Implicit Augmentations",
+        "new_link": "http://arxiv.org/abs/2211.03710v1",
+        "new_summary": "  Existing graph contrastive learning methods rely on augmentation techniques\nbased on random perturbations (e.g., randomly adding or dropping edges and\nnodes). Nevertheless, altering certain edges or nodes can unexpectedly change\nthe graph characteristics, and choosing the optimal perturbing ratio for each\ndataset requires onerous manual tuning. In this paper, we introduce Implicit\nGraph Contrastive Learning (iGCL), which utilizes augmentations in the latent\nspace learned from a Variational Graph Auto-Encoder by reconstructing graph\ntopological structure. Importantly, instead of explicitly sampling\naugmentations from latent distributions, we further propose an upper bound for\nthe expected contrastive loss to improve the efficiency of our learning\nalgorithm. Thus, graph semantics can be preserved within the augmentations in\nan intelligent way without arbitrary manual design or prior human knowledge.\nExperimental results on both graph-level and node-level tasks show that the\nproposed method achieves state-of-the-art performance compared to other\nbenchmarks, where ablation studies in the end demonstrate the effectiveness of\nmodules in iGCL.\n",
+        "pdf_link": "https://arxiv.org/pdf/2211.03710v1.pdf",
+        "similarity": 0.7144202648657528,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2101.11525v2",
+        "published": "2022-11-07"
+    },
+    {
+        "new_title": "A Simplified Framework for Contrastive Learning for Node Representations",
+        "new_link": "http://arxiv.org/abs/2305.00623v1",
+        "new_summary": "  Contrastive learning has recently established itself as a powerful\nself-supervised learning framework for extracting rich and versatile data\nrepresentations. Broadly speaking, contrastive learning relies on a data\naugmentation scheme to generate two versions of the input data and learns\nlow-dimensional representations by maximizing a normalized temperature-scaled\ncross entropy loss (NT-Xent) to identify augmented samples corresponding to the\nsame original entity. In this paper, we investigate the potential of deploying\ncontrastive learning in combination with Graph Neural Networks for embedding\nnodes in a graph. Specifically, we show that the quality of the resulting\nembeddings and training time can be significantly improved by a simple\ncolumn-wise postprocessing of the embedding matrix, instead of the row-wise\npostprocessing via multilayer perceptrons (MLPs) that is adopted by the\nmajority of peer methods. This modification yields improvements in downstream\nclassification tasks of up to 1.5% and even beats existing state-of-the-art\napproaches on 6 out of 8 different benchmarks. We justify our choices of\npostprocessing by revisiting the \"alignment vs. uniformity paradigm\", and show\nthat column-wise post-processing improves both \"alignment\" and \"uniformity\" of\nthe embeddings.\n",
+        "pdf_link": "https://arxiv.org/pdf/2305.00623v1.pdf",
+        "similarity": 0.7043960824692443,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2101.11525v2",
+        "published": "2023-05-01"
+    },
+    {
+        "new_title": "CoCo: A Coupled Contrastive Framework for Unsupervised Domain Adaptive\n  Graph Classification",
+        "new_link": "http://arxiv.org/abs/2306.04979v2",
+        "new_summary": "  Although graph neural networks (GNNs) have achieved impressive achievements\nin graph classification, they often need abundant task-specific labels, which\ncould be extensively costly to acquire. A credible solution is to explore\nadditional labeled graphs to enhance unsupervised learning on the target\ndomain. However, how to apply GNNs to domain adaptation remains unsolved owing\nto the insufficient exploration of graph topology and the significant domain\ndiscrepancy. In this paper, we propose Coupled Contrastive Graph Representation\nLearning (CoCo), which extracts the topological information from coupled\nlearning branches and reduces the domain discrepancy with coupled contrastive\nlearning. CoCo contains a graph convolutional network branch and a hierarchical\ngraph kernel network branch, which explore graph topology in implicit and\nexplicit manners. Besides, we incorporate coupled branches into a holistic\nmulti-view contrastive learning framework, which not only incorporates graph\nrepresentations learned from complementary views for enhanced understanding,\nbut also encourages the similarity between cross-domain example pairs with the\nsame semantics for domain alignment. Extensive experiments on popular datasets\nshow that our CoCo outperforms these competing baselines in different settings\ngenerally.\n",
+        "pdf_link": "https://arxiv.org/pdf/2306.04979v2.pdf",
+        "similarity": 0.7141025376711652,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2101.11525v2",
+        "published": "2023-06-08"
+    },
+    {
+        "new_title": "Can Contrastive Learning Refine Embeddings",
+        "new_link": "http://arxiv.org/abs/2404.08701v1",
+        "new_summary": "  Recent advancements in contrastive learning have revolutionized\nself-supervised representation learning and achieved state-of-the-art\nperformance on benchmark tasks. While most existing methods focus on applying\ncontrastive learning to input data modalities such as images, natural language\nsentences, or networks, they overlook the potential of utilizing outputs from\npreviously trained encoders. In this paper, we introduce SIMSKIP, a novel\ncontrastive learning framework that specifically refines input embeddings for\ndownstream tasks. Unlike traditional unsupervised learning approaches, SIMSKIP\ntakes advantage of the output embeddings of encoder models as its input.\nThrough theoretical analysis, we provide evidence that applying SIMSKIP does\nnot result in larger upper bounds on downstream task errors than those of the\noriginal embeddings, which serve as SIMSKIP's input. Experimental results on\nvarious open datasets demonstrate that the embeddings produced by SIMSKIP\nimprove performance on downstream tasks.\n",
+        "pdf_link": "https://arxiv.org/pdf/2404.08701v1.pdf",
+        "similarity": 0.7297234349311089,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2404.00225v1",
+        "published": "2024-04-11"
+    },
+    {
+        "new_title": "Graph Contrastive Clustering",
+        "new_link": "http://arxiv.org/abs/2104.01429v1",
+        "new_summary": "  Recently, some contrastive learning methods have been proposed to\nsimultaneously learn representations and clustering assignments, achieving\nsignificant improvements. However, these methods do not take the category\ninformation and clustering objective into consideration, thus the learned\nrepresentations are not optimal for clustering and the performance might be\nlimited. Towards this issue, we first propose a novel graph contrastive\nlearning framework, which is then applied to the clustering task and we come up\nwith the Graph Constrastive Clustering~(GCC) method. Different from basic\ncontrastive clustering that only assumes an image and its augmentation should\nshare similar representation and clustering assignments, we lift the\ninstance-level consistency to the cluster-level consistency with the assumption\nthat samples in one cluster and their augmentations should all be similar.\nSpecifically, on the one hand, the graph Laplacian based contrastive loss is\nproposed to learn more discriminative and clustering-friendly features. On the\nother hand, a novel graph-based contrastive learning strategy is proposed to\nlearn more compact clustering assignments. Both of them incorporate the latent\ncategory information to reduce the intra-cluster variance while increasing the\ninter-cluster variance. Experiments on six commonly used datasets demonstrate\nthe superiority of our proposed approach over the state-of-the-art methods.\n",
+        "pdf_link": "https://arxiv.org/pdf/2104.01429v1.pdf",
+        "similarity": 0.7320569661709837,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2101.11525v2",
+        "published": "2021-04-03"
+    },
+    {
+        "new_title": "Heterogeneous Contrastive Learning",
+        "new_link": "http://arxiv.org/abs/2105.09401v3",
+        "new_summary": "  With the advent of big data across multiple high-impact applications, we are\noften facing the challenge of complex heterogeneity. The newly collected data\nusually consist of multiple modalities and are characterized with multiple\nlabels, thus exhibiting the co-existence of multiple types of heterogeneity.\nAlthough state-of-the-art techniques are good at modeling complex heterogeneity\nwith sufficient label information, such label information can be quite\nexpensive to obtain in real applications. Recently, researchers pay great\nattention to contrastive learning due to its prominent performance by utilizing\nrich unlabeled data. However, existing work on contrastive learning is not able\nto address the problem of false negative pairs, i.e., some `negative' pairs may\nhave similar representations if they have the same label. To overcome the\nissues, in this paper, we propose a unified heterogeneous learning framework,\nwhich combines both the weighted unsupervised contrastive loss and the weighted\nsupervised contrastive loss to model multiple types of heterogeneity. We first\nprovide a theoretical analysis showing that the vanilla contrastive learning\nloss easily leads to the sub-optimal solution in the presence of false negative\npairs, whereas the proposed weighted loss could automatically adjust the weight\nbased on the similarity of the learned representations to mitigate this issue.\nExperimental results on real-world data sets demonstrate the effectiveness and\nthe efficiency of the proposed framework modeling multiple types of\nheterogeneity.\n",
+        "pdf_link": "https://arxiv.org/pdf/2105.09401v3.pdf",
+        "similarity": 0.7384560894916671,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2404.00225v1",
+        "published": "2021-05-19"
+    },
+    {
+        "new_title": "Self-supervised Contrastive Attributed Graph Clustering",
+        "new_link": "http://arxiv.org/abs/2110.08264v1",
+        "new_summary": "  Attributed graph clustering, which learns node representation from node\nattribute and topological graph for clustering, is a fundamental but\nchallenging task for graph analysis. Recently, methods based on graph\ncontrastive learning (GCL) have obtained impressive clustering performance on\nthis task. Yet, we observe that existing GCL-based methods 1) fail to benefit\nfrom imprecise clustering labels; 2) require a post-processing operation to get\nclustering labels; 3) cannot solve out-of-sample (OOS) problem. To address\nthese issues, we propose a novel attributed graph clustering network, namely\nSelf-supervised Contrastive Attributed Graph Clustering (SCAGC). In SCAGC, by\nleveraging inaccurate clustering labels, a self-supervised contrastive loss,\nwhich aims to maximize the similarities of intra-cluster nodes while minimizing\nthe similarities of inter-cluster nodes, are designed for node representation\nlearning. Meanwhile, a clustering module is built to directly output clustering\nlabels by contrasting the representation of different clusters. Thus, for the\nOOS nodes, SCAGC can directly calculate their clustering labels. Extensive\nexperimental results on four benchmark datasets have shown that SCAGC\nconsistently outperforms 11 competitive clustering methods.\n",
+        "pdf_link": "https://arxiv.org/pdf/2110.08264v1.pdf",
+        "similarity": 0.7619034678291419,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2101.11525v2",
+        "published": "2021-10-15"
+    },
+    {
+        "new_title": "FastGCL: Fast Self-Supervised Learning on Graphs via Contrastive\n  Neighborhood Aggregation",
+        "new_link": "http://arxiv.org/abs/2205.00905v1",
+        "new_summary": "  Graph contrastive learning (GCL), as a popular approach to graph\nself-supervised learning, has recently achieved a non-negligible effect. To\nachieve superior performance, the majority of existing GCL methods elaborate on\ngraph data augmentation to construct appropriate contrastive pairs. However,\nexisting methods place more emphasis on the complex graph data augmentation\nwhich requires extra time overhead, and pay less attention to developing\ncontrastive schemes specific to encoder characteristics. We argue that a better\ncontrastive scheme should be tailored to the characteristics of graph neural\nnetworks (e.g., neighborhood aggregation) and propose a simple yet effective\nmethod named FastGCL. Specifically, by constructing weighted-aggregated and\nnon-aggregated neighborhood information as positive and negative samples\nrespectively, FastGCL identifies the potential semantic information of data\nwithout disturbing the graph topology and node attributes, resulting in faster\ntraining and convergence speeds. Extensive experiments have been conducted on\nnode classification and graph classification tasks, showing that FastGCL has\ncompetitive classification performance and significant training speedup\ncompared to existing state-of-the-art methods.\n",
+        "pdf_link": "https://arxiv.org/pdf/2205.00905v1.pdf",
+        "similarity": 0.7714356147984648,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2101.11525v2",
+        "published": "2022-05-02"
+    },
+    {
+        "new_title": "Link Prediction with Non-Contrastive Learning",
+        "new_link": "http://arxiv.org/abs/2211.14394v2",
+        "new_summary": "  A recent focal area in the space of graph neural networks (GNNs) is graph\nself-supervised learning (SSL), which aims to derive useful node\nrepresentations without labeled data. Notably, many state-of-the-art graph SSL\nmethods are contrastive methods, which use a combination of positive and\nnegative samples to learn node representations. Owing to challenges in negative\nsampling (slowness and model sensitivity), recent literature introduced\nnon-contrastive methods, which instead only use positive samples. Though such\nmethods have shown promising performance in node-level tasks, their suitability\nfor link prediction tasks, which are concerned with predicting link existence\nbetween pairs of nodes (and have broad applicability to recommendation systems\ncontexts) is yet unexplored. In this work, we extensively evaluate the\nperformance of existing non-contrastive methods for link prediction in both\ntransductive and inductive settings. While most existing non-contrastive\nmethods perform poorly overall, we find that, surprisingly, BGRL generally\nperforms well in transductive settings. However, it performs poorly in the more\nrealistic inductive settings where the model has to generalize to links to/from\nunseen nodes. We find that non-contrastive models tend to overfit to the\ntraining graph and use this analysis to propose T-BGRL, a novel non-contrastive\nframework that incorporates cheap corruptions to improve the generalization\nability of the model. This simple modification strongly improves inductive\nperformance in 5/6 of our datasets, with up to a 120% improvement in\nHits@50--all with comparable speed to other non-contrastive baselines and up to\n14x faster than the best-performing contrastive baseline. Our work imparts\ninteresting findings about non-contrastive learning for link prediction and\npaves the way for future researchers to further expand upon this area.\n",
+        "pdf_link": "https://arxiv.org/pdf/2211.14394v2.pdf",
+        "similarity": 0.702519195491869,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2101.11525v2",
+        "published": "2022-11-25"
+    },
+    {
+        "new_title": "A Survey on Contrastive Self-supervised Learning",
+        "new_link": "http://arxiv.org/abs/2011.00362v3",
+        "new_summary": "  Self-supervised learning has gained popularity because of its ability to\navoid the cost of annotating large-scale datasets. It is capable of adopting\nself-defined pseudo labels as supervision and use the learned representations\nfor several downstream tasks. Specifically, contrastive learning has recently\nbecome a dominant component in self-supervised learning methods for computer\nvision, natural language processing (NLP), and other domains. It aims at\nembedding augmented versions of the same sample close to each other while\ntrying to push away embeddings from different samples. This paper provides an\nextensive review of self-supervised methods that follow the contrastive\napproach. The work explains commonly used pretext tasks in a contrastive\nlearning setup, followed by different architectures that have been proposed so\nfar. Next, we have a performance comparison of different methods for multiple\ndownstream tasks such as image classification, object detection, and action\nrecognition. Finally, we conclude with the limitations of the current methods\nand the need for further techniques and future directions to make substantial\nprogress.\n",
+        "pdf_link": "https://arxiv.org/pdf/2011.00362v3.pdf",
+        "similarity": 0.7478147686163055,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2404.00225v1",
+        "published": "2020-10-31"
+    },
+    {
+        "new_title": "Graph Contrastive Learning with Cross-view Reconstruction",
+        "new_link": "http://arxiv.org/abs/2209.07699v3",
+        "new_summary": "  Among different existing graph self-supervised learning strategies, graph\ncontrastive learning (GCL) has been one of the most prevalent approaches to\nthis problem. Despite the remarkable performance those GCL methods have\nachieved, existing GCL methods that heavily depend on various manually designed\naugmentation techniques still struggle to alleviate the feature suppression\nissue without risking losing task-relevant information. Consequently, the\nlearned representation is either brittle or unilluminating. In light of this,\nwe introduce the Graph Contrastive Learning with Cross-View Reconstruction\n(GraphCV), which follows the information bottleneck principle to learn minimal\nyet sufficient representation from graph data. Specifically, GraphCV aims to\nelicit the predictive (useful for downstream instance discrimination) and other\nnon-predictive features separately. Except for the conventional contrastive\nloss which guarantees the consistency and sufficiency of the representation\nacross different augmentation views, we introduce a cross-view reconstruction\nmechanism to pursue the disentanglement of the two learned representations.\nBesides, an adversarial view perturbed from the original view is added as the\nthird view for the contrastive loss to guarantee the intactness of the global\nsemantics and improve the representation robustness. We empirically demonstrate\nthat our proposed model outperforms the state-of-the-art on graph\nclassification task over multiple benchmark datasets.\n",
+        "pdf_link": "https://arxiv.org/pdf/2209.07699v3.pdf",
+        "similarity": 0.7153232735011509,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2101.11525v2",
+        "published": "2022-09-16"
+    },
+    {
+        "new_title": "UniCLIP: Unified Framework for Contrastive Language-Image Pre-training",
+        "new_link": "http://arxiv.org/abs/2209.13430v2",
+        "new_summary": "  Pre-training vision-language models with contrastive objectives has shown\npromising results that are both scalable to large uncurated datasets and\ntransferable to many downstream applications. Some following works have\ntargeted to improve data efficiency by adding self-supervision terms, but\ninter-domain (image-text) contrastive loss and intra-domain (image-image)\ncontrastive loss are defined on individual spaces in those works, so many\nfeasible combinations of supervision are overlooked. To overcome this issue, we\npropose UniCLIP, a Unified framework for Contrastive Language-Image\nPre-training. UniCLIP integrates the contrastive loss of both inter-domain\npairs and intra-domain pairs into a single universal space. The discrepancies\nthat occur when integrating contrastive loss between different domains are\nresolved by the three key components of UniCLIP: (1) augmentation-aware feature\nembedding, (2) MP-NCE loss, and (3) domain dependent similarity measure.\nUniCLIP outperforms previous vision-language pre-training methods on various\nsingle- and multi-modality downstream tasks. In our experiments, we show that\neach component that comprises UniCLIP contributes well to the final\nperformance.\n",
+        "pdf_link": "https://arxiv.org/pdf/2209.13430v2.pdf",
+        "similarity": 0.7030404584235173,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2404.00225v1",
+        "published": "2022-09-27"
+    },
+    {
+        "new_title": "Supervised Contrastive Learning with Structure Inference for Graph\n  Classification",
+        "new_link": "http://arxiv.org/abs/2203.07691v1",
+        "new_summary": "  Advanced graph neural networks have shown great potentials in graph\nclassification tasks recently. Different from node classification where node\nembeddings aggregated from local neighbors can be directly used to learn node\nlabels, graph classification requires a hierarchical accumulation of different\nlevels of topological information to generate discriminative graph embeddings.\nStill, how to fully explore graph structures and formulate an effective graph\nclassification pipeline remains rudimentary. In this paper, we propose a novel\ngraph neural network based on supervised contrastive learning with structure\ninference for graph classification. First, we propose a data-driven graph\naugmentation strategy that can discover additional connections to enhance the\nexisting edge set. Concretely, we resort to a structure inference stage based\non diffusion cascades to recover possible connections with high node\nsimilarities. Second, to improve the contrastive power of graph neural\nnetworks, we propose to use a supervised contrastive loss for graph\nclassification. With the integration of label information, the one-vs-many\ncontrastive learning can be extended to a many-vs-many setting, so that the\ngraph-level embeddings with higher topological similarities will be pulled\ncloser. The supervised contrastive loss and structure inference can be\nnaturally incorporated within the hierarchical graph neural networks where the\ntopological patterns can be fully explored to produce discriminative graph\nembeddings. Experiment results show the effectiveness of the proposed method\ncompared with recent state-of-the-art methods.\n",
+        "pdf_link": "https://arxiv.org/pdf/2203.07691v1.pdf",
+        "similarity": 0.7084175310132627,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2101.11525v2",
+        "published": "2022-03-15"
+    },
+    {
+        "new_title": "When Does Contrastive Visual Representation Learning Work?",
+        "new_link": "http://arxiv.org/abs/2105.05837v2",
+        "new_summary": "  Recent self-supervised representation learning techniques have largely closed\nthe gap between supervised and unsupervised learning on ImageNet\nclassification. While the particulars of pretraining on ImageNet are now\nrelatively well understood, the field still lacks widely accepted best\npractices for replicating this success on other datasets. As a first step in\nthis direction, we study contrastive self-supervised learning on four diverse\nlarge-scale datasets. By looking through the lenses of data quantity, data\ndomain, data quality, and task granularity, we provide new insights into the\nnecessary conditions for successful self-supervised learning. Our key findings\ninclude observations such as: (i) the benefit of additional pretraining data\nbeyond 500k images is modest, (ii) adding pretraining images from another\ndomain does not lead to more general representations, (iii) corrupted\npretraining images have a disparate impact on supervised and self-supervised\npretraining, and (iv) contrastive learning lags far behind supervised learning\non fine-grained visual classification tasks.\n",
+        "pdf_link": "https://arxiv.org/pdf/2105.05837v2.pdf",
+        "similarity": 0.718519084239158,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2404.00225v1",
+        "published": "2021-05-12"
+    },
+    {
+        "new_title": "Residual Contrastive Learning for Image Reconstruction: Learning\n  Transferable Representations from Noisy Images",
+        "new_link": "http://arxiv.org/abs/2106.10070v2",
+        "new_summary": "  This paper is concerned with contrastive learning (CL) for low-level image\nrestoration and enhancement tasks. We propose a new label-efficient learning\nparadigm based on residuals, residual contrastive learning (RCL), and derive an\nunsupervised visual representation learning framework, suitable for low-level\nvision tasks with noisy inputs. While supervised image reconstruction aims to\nminimize residual terms directly, RCL alternatively builds a connection between\nresiduals and CL by defining a novel instance discrimination pretext task,\nusing residuals as the discriminative feature. Our formulation mitigates the\nsevere task misalignment between instance discrimination pretext tasks and\ndownstream image reconstruction tasks, present in existing CL frameworks.\nExperimentally, we find that RCL can learn robust and transferable\nrepresentations that improve the performance of various downstream tasks, such\nas denoising and super resolution, in comparison with recent self-supervised\nmethods designed specifically for noisy inputs. Additionally, our unsupervised\npre-training can significantly reduce annotation costs whilst maintaining\nperformance competitive with fully-supervised image reconstruction.\n",
+        "pdf_link": "https://arxiv.org/pdf/2106.10070v2.pdf",
+        "similarity": 0.7033715543211465,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2404.00225v1",
+        "published": "2021-06-18"
+    },
+    {
+        "new_title": "Rethinking the Promotion Brought by Contrastive Learning to\n  Semi-Supervised Node Classification",
+        "new_link": "http://arxiv.org/abs/2012.07437v2",
+        "new_summary": "  Graph Contrastive Learning (GCL) has proven highly effective in promoting the\nperformance of Semi-Supervised Node Classification (SSNC). However, existing\nGCL methods are generally transferred from other fields like CV or NLP, whose\nunderlying working mechanism remains under-explored. In this work, we first\ndeeply probe the working mechanism of GCL in SSNC, and find that the promotion\nbrought by GCL is severely unevenly distributed: the improvement mainly comes\nfrom subgraphs with less annotated information, which is fundamentally\ndifferent from contrastive learning in other fields. However, existing GCL\nmethods generally ignore this uneven distribution of annotated information and\napply GCL evenly to the whole graph. To remedy this issue and further improve\nGCL in SSNC, we propose the Topology InFormation gain-Aware Graph Contrastive\nLearning (TIFA-GCL) framework that considers the annotated information\ndistribution across graph in GCL. Extensive experiments on six benchmark graph\ndatasets, including the enormous OGB-Products graph, show that TIFA-GCL can\nbring a larger improvement than existing GCL methods in both transductive and\ninductive settings. Further experiments demonstrate the generalizability and\ninterpretability of TIFA-GCL.\n",
+        "pdf_link": "https://arxiv.org/pdf/2012.07437v2.pdf",
+        "similarity": 0.7119102749009871,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2101.11525v2",
+        "published": "2020-12-14"
+    },
+    {
+        "new_title": "Self-Supervised Graph Learning with Proximity-based Views and Channel\n  Contrast",
+        "new_link": "http://arxiv.org/abs/2106.03723v2",
+        "new_summary": "  We consider graph representation learning in a self-supervised manner. Graph\nneural networks (GNNs) use neighborhood aggregation as a core component that\nresults in feature smoothing among nodes in proximity. While successful in\nvarious prediction tasks, such a paradigm falls short of capturing nodes'\nsimilarities over a long distance, which proves to be important for\nhigh-quality learning. To tackle this problem, we strengthen the graph with two\nadditional graph views, in which nodes are directly linked to those with the\nmost similar features or local structures. Not restricted by connectivity in\nthe original graph, the generated views allow the model to enhance its\nexpressive power with new and complementary perspectives from which to look at\nthe relationship between nodes. Following a contrastive learning approach, we\npropose a method that aims to maximize the agreement between representations\nacross generated views and the original graph. We also propose a channel-level\ncontrast approach that greatly reduces computation cost, compared to the\ncommonly used node level contrast, which requires computation cost quadratic in\nthe number of nodes. Extensive experiments on seven assortative graphs and four\ndisassortative graphs demonstrate the effectiveness of our approach.\n",
+        "pdf_link": "https://arxiv.org/pdf/2106.03723v2.pdf",
+        "similarity": 0.7071096462092705,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2101.11525v2",
+        "published": "2021-06-07"
+    },
+    {
+        "new_title": "Contrastive Representation Learning Based on Multiple Node-centered\n  Subgraphs",
+        "new_link": "http://arxiv.org/abs/2308.16441v1",
+        "new_summary": "  As the basic element of graph-structured data, node has been recognized as\nthe main object of study in graph representation learning. A single node\nintuitively has multiple node-centered subgraphs from the whole graph (e.g.,\none person in a social network has multiple social circles based on his\ndifferent relationships). We study this intuition under the framework of graph\ncontrastive learning, and propose a multiple node-centered subgraphs\ncontrastive representation learning method to learn node representation on\ngraphs in a self-supervised way. Specifically, we carefully design a series of\nnode-centered regional subgraphs of the central node. Then, the mutual\ninformation between different subgraphs of the same node is maximized by\ncontrastive loss. Experiments on various real-world datasets and different\ndownstream tasks demonstrate that our model has achieved state-of-the-art\nresults.\n",
+        "pdf_link": "https://arxiv.org/pdf/2308.16441v1.pdf",
+        "similarity": 0.7256059173054722,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2101.11525v2",
+        "published": "2023-08-31"
+    },
+    {
+        "new_title": "Low-Rank Graph Contrastive Learning for Node Classification",
+        "new_link": "http://arxiv.org/abs/2402.09600v1",
+        "new_summary": "  Graph Neural Networks (GNNs) have been widely used to learn node\nrepresentations and with outstanding performance on various tasks such as node\nclassification. However, noise, which inevitably exists in real-world graph\ndata, would considerably degrade the performance of GNNs revealed by recent\nstudies. In this work, we propose a novel and robust GNN encoder, Low-Rank\nGraph Contrastive Learning (LR-GCL). Our method performs transductive node\nclassification in two steps. First, a low-rank GCL encoder named LR-GCL is\ntrained by prototypical contrastive learning with low-rank regularization.\nNext, using the features produced by LR-GCL, a linear transductive\nclassification algorithm is used to classify the unlabeled nodes in the graph.\nOur LR-GCL is inspired by the low frequency property of the graph data and its\nlabels, and it is also theoretically motivated by our sharp generalization\nbound for transductive learning. To the best of our knowledge, our theoretical\nresult is among the first to theoretically demonstrate the advantage of\nlow-rank learning in graph contrastive learning supported by strong empirical\nperformance. Extensive experiments on public benchmarks demonstrate the\nsuperior performance of LR-GCL and the robustness of the learned node\nrepresentations. The code of LR-GCL is available at\n\\url{https://anonymous.4open.science/r/Low-Rank_Graph_Contrastive_Learning-64A6/}.\n",
+        "pdf_link": "https://arxiv.org/pdf/2402.09600v1.pdf",
+        "similarity": 0.7222685809559749,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2101.11525v2",
+        "published": "2024-02-14"
+    },
+    {
+        "new_title": "Incremental False Negative Detection for Contrastive Learning",
+        "new_link": "http://arxiv.org/abs/2106.03719v6",
+        "new_summary": "  Self-supervised learning has recently shown great potential in vision tasks\nthrough contrastive learning, which aims to discriminate each image, or\ninstance, in the dataset. However, such instance-level learning ignores the\nsemantic relationship among instances and sometimes undesirably repels the\nanchor from the semantically similar samples, termed as \"false negatives\". In\nthis work, we show that the unfavorable effect from false negatives is more\nsignificant for the large-scale datasets with more semantic concepts. To\naddress the issue, we propose a novel self-supervised contrastive learning\nframework that incrementally detects and explicitly removes the false negative\nsamples. Specifically, following the training process, our method dynamically\ndetects increasing high-quality false negatives considering that the encoder\ngradually improves and the embedding space becomes more semantically\nstructural. Next, we discuss two strategies to explicitly remove the detected\nfalse negatives during contrastive learning. Extensive experiments show that\nour framework outperforms other self-supervised contrastive learning methods on\nmultiple benchmarks in a limited resource setup.\n",
+        "pdf_link": "https://arxiv.org/pdf/2106.03719v6.pdf",
+        "similarity": 0.7047605641362983,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2404.00225v1",
+        "published": "2021-06-07"
+    },
+    {
+        "new_title": "Single-Pass Contrastive Learning Can Work for Both Homophilic and\n  Heterophilic Graph",
+        "new_link": "http://arxiv.org/abs/2211.10890v4",
+        "new_summary": "  Existing graph contrastive learning (GCL) techniques typically require two\nforward passes for a single instance to construct the contrastive loss, which\nis effective for capturing the low-frequency signals of node features. Such a\ndual-pass design has shown empirical success on homophilic graphs, but its\neffectiveness on heterophilic graphs, where directly connected nodes typically\nhave different labels, is unknown. In addition, existing GCL approaches fail to\nprovide strong performance guarantees. Coupled with the unpredictability of GCL\napproaches on heterophilic graphs, their applicability in real-world contexts\nis limited. Then, a natural question arises: Can we design a GCL method that\nworks for both homophilic and heterophilic graphs with a performance guarantee?\nTo answer this question, we theoretically study the concentration property of\nfeatures obtained by neighborhood aggregation on homophilic and heterophilic\ngraphs, introduce the single-pass augmentation-free graph contrastive learning\nloss based on the property, and provide performance guarantees for the\nminimizer of the loss on downstream tasks. As a direct consequence of our\nanalysis, we implement the Single-Pass Graph Contrastive Learning method\n(SP-GCL). Empirically, on 14 benchmark datasets with varying degrees of\nhomophily, the features learned by the SP-GCL can match or outperform existing\nstrong baselines with significantly less computational overhead, which\ndemonstrates the usefulness of our findings in real-world cases.\n",
+        "pdf_link": "https://arxiv.org/pdf/2211.10890v4.pdf",
+        "similarity": 0.7416397706964512,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2101.11525v2",
+        "published": "2022-11-20"
+    },
+    {
+        "new_title": "CSGCL: Community-Strength-Enhanced Graph Contrastive Learning",
+        "new_link": "http://arxiv.org/abs/2305.04658v1",
+        "new_summary": "  Graph Contrastive Learning (GCL) is an effective way to learn generalized\ngraph representations in a self-supervised manner, and has grown rapidly in\nrecent years. However, the underlying community semantics has not been well\nexplored by most previous GCL methods. Research that attempts to leverage\ncommunities in GCL regards them as having the same influence on the graph,\nleading to extra representation errors. To tackle this issue, we define\n''community strength'' to measure the difference of influence among\ncommunities. Under this premise, we propose a Community-Strength-enhanced Graph\nContrastive Learning (CSGCL) framework to preserve community strength\nthroughout the learning process. Firstly, we present two novel graph\naugmentation methods, Communal Attribute Voting (CAV) and Communal Edge\nDropping (CED), where the perturbations of node attributes and edges are guided\nby community strength. Secondly, we propose a dynamic ''Team-up'' contrastive\nlearning scheme, where community strength is used to progressively fine-tune\nthe contrastive objective. We report extensive experiment results on three\ndownstream tasks: node classification, node clustering, and link prediction.\nCSGCL achieves state-of-the-art performance compared with other GCL methods,\nvalidating that community strength brings effectiveness and generality to graph\nrepresentations. Our code is available at\nhttps://github.com/HanChen-HUST/CSGCL.\n",
+        "pdf_link": "https://arxiv.org/pdf/2305.04658v1.pdf",
+        "similarity": 0.7017452581902698,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2101.11525v2",
+        "published": "2023-05-08"
+    },
+    {
+        "new_title": "From Pretext to Purpose: Batch-Adaptive Self-Supervised Learning",
+        "new_link": "http://arxiv.org/abs/2311.09974v2",
+        "new_summary": "  In recent years, self-supervised contrastive learning has emerged as a\ndistinguished paradigm in the artificial intelligence landscape. It facilitates\nunsupervised feature learning through contrastive delineations at the instance\nlevel. However, crafting an effective self-supervised paradigm remains a\npivotal challenge within this field. This paper delves into two crucial factors\nimpacting self-supervised contrastive learning-bach size and pretext tasks, and\nfrom a data processing standpoint, proposes an adaptive technique of batch\nfusion. The proposed method, via dimensionality reduction and reconstruction of\nbatch data, enables formerly isolated individual data to partake in intra-batch\ncommunication through the Embedding Layer. Moreover, it adaptively amplifies\nthe self-supervised feature encoding capability as the training progresses. We\nconducted a linear classification test of this method based on the classic\ncontrastive learning framework on ImageNet-1k. The empirical findings\nillustrate that our approach achieves state-of-the-art performance under\nequitable comparisons. Benefiting from its \"plug-and-play\" characteristics, we\nfurther explored other contrastive learning methods. On the ImageNet-100,\ncompared to the original performance, the top1 has seen a maximum increase of\n1.25%. We suggest that the proposed method may contribute to the advancement of\ndata-driven self-supervised learning research, bringing a fresh perspective to\nthis community.\n",
+        "pdf_link": "https://arxiv.org/pdf/2311.09974v2.pdf",
+        "similarity": 0.7361952757176026,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2404.00225v1",
+        "published": "2023-11-16"
+    },
+    {
+        "new_title": "Towards Unsupervised Deep Graph Structure Learning",
+        "new_link": "http://arxiv.org/abs/2201.06367v1",
+        "new_summary": "  In recent years, graph neural networks (GNNs) have emerged as a successful\ntool in a variety of graph-related applications. However, the performance of\nGNNs can be deteriorated when noisy connections occur in the original graph\nstructures; besides, the dependence on explicit structures prevents GNNs from\nbeing applied to general unstructured scenarios. To address these issues,\nrecently emerged deep graph structure learning (GSL) methods propose to jointly\noptimize the graph structure along with GNN under the supervision of a node\nclassification task. Nonetheless, these methods focus on a supervised learning\nscenario, which leads to several problems, i.e., the reliance on labels, the\nbias of edge distribution, and the limitation on application tasks. In this\npaper, we propose a more practical GSL paradigm, unsupervised graph structure\nlearning, where the learned graph topology is optimized by data itself without\nany external guidance (i.e., labels). To solve the unsupervised GSL problem, we\npropose a novel StrUcture Bootstrapping contrastive LearnIng fraMEwork (SUBLIME\nfor abbreviation) with the aid of self-supervised contrastive learning.\nSpecifically, we generate a learning target from the original data as an\n\"anchor graph\", and use a contrastive loss to maximize the agreement between\nthe anchor graph and the learned graph. To provide persistent guidance, we\ndesign a novel bootstrapping mechanism that upgrades the anchor graph with\nlearned structures during model learning. We also design a series of graph\nlearners and post-processing schemes to model the structures to learn.\nExtensive experiments on eight benchmark datasets demonstrate the significant\neffectiveness of our proposed SUBLIME and high quality of the optimized graphs.\n",
+        "pdf_link": "https://arxiv.org/pdf/2201.06367v1.pdf",
+        "similarity": 0.7141634105147769,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2101.11525v2",
+        "published": "2022-01-17"
+    },
+    {
+        "new_title": "Hierarchical Topology Isomorphism Expertise Embedded Graph Contrastive\n  Learning",
+        "new_link": "http://arxiv.org/abs/2312.14222v2",
+        "new_summary": "  Graph contrastive learning (GCL) aims to align the positive features while\ndifferentiating the negative features in the latent space by minimizing a\npair-wise contrastive loss. As the embodiment of an outstanding discriminative\nunsupervised graph representation learning approach, GCL achieves impressive\nsuccesses in various graph benchmarks. However, such an approach falls short of\nrecognizing the topology isomorphism of graphs, resulting in that graphs with\nrelatively homogeneous node features cannot be sufficiently discriminated. By\nrevisiting classic graph topology recognition works, we disclose that the\ncorresponding expertise intuitively complements GCL methods. To this end, we\npropose a novel hierarchical topology isomorphism expertise embedded graph\ncontrastive learning, which introduces knowledge distillations to empower GCL\nmodels to learn the hierarchical topology isomorphism expertise, including the\ngraph-tier and subgraph-tier. On top of this, the proposed method holds the\nfeature of plug-and-play, and we empirically demonstrate that the proposed\nmethod is universal to multiple state-of-the-art GCL models. The solid\ntheoretical analyses are further provided to prove that compared with\nconventional GCL methods, our method acquires the tighter upper bound of Bayes\nclassification error. We conduct extensive experiments on real-world benchmarks\nto exhibit the performance superiority of our method over candidate GCL\nmethods, e.g., for the real-world graph representation learning experiments,\nthe proposed method beats the state-of-the-art method by 0.23% on unsupervised\nrepresentation learning setting, 0.43% on transfer learning setting. Our code\nis available at https://github.com/jyf123/HTML.\n",
+        "pdf_link": "https://arxiv.org/pdf/2312.14222v2.pdf",
+        "similarity": 0.7055370860144313,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2101.11525v2",
+        "published": "2023-12-21"
+    },
+    {
+        "new_title": "Bayesian Robust Graph Contrastive Learning",
+        "new_link": "http://arxiv.org/abs/2205.14109v3",
+        "new_summary": "  Graph Neural Networks (GNNs) have been widely used to learn node\nrepresentations and with outstanding performance on various tasks such as node\nclassification. However, noise, which inevitably exists in real-world graph\ndata, would considerably degrade the performance of GNNs as the noise is easily\npropagated via the graph structure. In this work, we propose a novel and robust\nmethod, Bayesian Robust Graph Contrastive Learning (BRGCL), which trains a GNN\nencoder to learn robust node representations. The BRGCL encoder is a completely\nunsupervised encoder. Two steps are iteratively executed at each epoch of\ntraining the BRGCL encoder: (1) estimating confident nodes and computing robust\ncluster prototypes of node representations through a novel Bayesian\nnonparametric method; (2) prototypical contrastive learning between the node\nrepresentations and the robust cluster prototypes. Experiments on public and\nlarge-scale benchmarks demonstrate the superior performance of BRGCL and the\nrobustness of the learned node representations. The code of BRGCL is available\nat \\url{https://github.com/BRGCL-code/BRGCL-code}.\n",
+        "pdf_link": "https://arxiv.org/pdf/2205.14109v3.pdf",
+        "similarity": 0.7159994802491384,
+        "existing_title": "Unknown Title",
+        "existing_link": "http://arxiv.org/abs/2101.11525v2",
+        "published": "2022-05-27"
+    }
+]

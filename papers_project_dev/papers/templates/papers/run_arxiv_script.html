@@ -1,0 +1,26 @@
+{% extends 'papers/base.html' %}
+
+{% block title %}Run arXiv Query{% endblock %}
+
+{% block content %}
+<div class="container mt-4 text-center">
+    <h1>Run arXiv Query</h1>
+    <form method="post" class="d-flex flex-column align-items-center">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-primary btn-lg"><i class="fas fa-play"></i> Run arXiv Query</button>
+    </form>
+
+    <!-- Display messages -->
+    <div class="messages mt-4">
+        {% if messages %}
+            <ul class="list-unstyled">
+                {% for message in messages %}
+                    <li class="alert alert-{{ message.tags }}">{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+
+    <a href="{% url 'paper_list' %}" class="btn btn-link mt-3"><i class="fas fa-arrow-left"></i> Back to list</a>
+</div>
+{% endblock %}

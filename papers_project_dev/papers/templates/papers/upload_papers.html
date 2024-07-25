@@ -1,0 +1,39 @@
+{% extends 'papers/base.html' %}
+
+{% block title %}Upload Papers{% endblock %}
+
+{% block content %}
+<div class="container mt-4 text-left">
+    <h1>Upload Papers</h1>
+    <form method="post" class="d-flex flex-column align-items-left">
+        {% csrf_token %}
+        <div class="my-2 w-50">{{ form.as_p }}</div>
+        <button type="submit" name="find_similar_papers" class="btn btn-primary mb-3">Find Similar Papers</button>
+    </form>
+
+    <h1 class="mt-4">Run arXiv Query</h1>
+    <form method="post" class="d-flex flex-column align-items-left>
+        {% csrf_token %}
+        <button type="submit" name="run_arxiv_query" class="btn btn-primary mb-3">Run arXiv Query</button>
+    </form>
+
+    <h1 class="mt-4">Upload JSON</h1>
+    <form method="post" class="d-flex flex-column align-items-left>
+        {% csrf_token %}
+        <button type="submit" name="upload_json" class="btn btn-primary mb-3">Update JSON File</button>
+    </form>
+
+    <a href="{% url 'paper_list' %}" class="btn btn-link mt-3">Back to list</a>
+
+    <!-- Display messages -->
+    <div class="messages mt-4">
+        {% if messages %}
+            <ul class="list-unstyled">
+                {% for message in messages %}
+                    <li class="alert alert-{{ message.tags }}">{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
