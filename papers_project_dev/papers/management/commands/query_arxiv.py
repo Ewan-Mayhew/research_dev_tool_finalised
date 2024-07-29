@@ -139,8 +139,8 @@ class Command(BaseCommand):
     def handle(self, *args, **kwargs):
         discipline = ['machine learning', 'deep learning', 'computer vision', 'nlp']
         max_results = 10000
-        existing_embeddings_file = '/Users/ewan.mayhew/Jaid/papers_project_dev/papers/data/arxiv_summaries_embeddings.json'
-        output_file = '/Users/ewan.mayhew/Jaid/papers_project_dev/papers/data/papers.json'
+        existing_embeddings_file = 'papers_project_dev/papers/data/arxiv_summaries_embeddings.json'
+        output_file = 'papers_project_dev/papers/data/papers.json'
         start_date = '2024-01-01'
         end_date = None
         main(discipline, max_results, existing_embeddings_file, output_file, start_date=start_date, end_date=end_date)

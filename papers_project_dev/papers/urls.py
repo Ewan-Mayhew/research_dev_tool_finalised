@@ -3,6 +3,7 @@ from . import views
 from .views import trends_closest_view, trends_scatter_view
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
+from .views import run_populators
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.paper_list, name='paper_list'),
@@ -19,4 +20,5 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     path('login/', auth_views.LoginView.as_view(), name='login'),
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
+    path('run-populators/', run_populators, name='run_populators')
 ]

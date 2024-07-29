@@ -72,5 +72,26 @@
         margin-bottom: 1rem !important;
     }
 </style>
+<html>
+<head>
+    <title>Run Populators</title>
+</head>
+<body>
+    <h1>Run Populators</h1>
+    <p> To compare recent paper in a field to a cannonical group of papers in that field, there needs to be a comprehensive canonical group. Pressing the button below populates the internal database with cannonical groups from all of the catagories you are able to select from the dropdown menu. As this involves collecting and embedding on the order of 1 million papers, this takes a long time to run. Ideally, only run this every few months.</p>
 
+    <form method="post" action="{% url 'run_populators' %}">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-primary w-100">Run Populators</button>
+    </form>
+    <p> </p>
+    {% if messages %}
+        <ul>
+            {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
 {% endblock %}

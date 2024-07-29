@@ -26,14 +26,25 @@ from .forms import PaperUploadForm, NoteForm, ArxivLinksForm
 # Configure logging
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
-DATASET_DIR = '/Users/ewan.mayhew/Jaid/papers_project_dev/papers/data'  # Update this path if necessary
+# Directory to store datasets
+DATASET_DIR = 'papers_project_dev/papers/data'  # Update this path if necessary
+
 @login_required
 def paper_list(request):
+    """
+    View to list all papers.
+    Only accessible to logged-in users.
+    """
     papers = Paper.objects.all()
     return render(request, 'papers/paper_list.html', {'papers': papers})
 
 @login_required
 def paper_detail(request, pk):
+    """
+    View to display the details of a specific paper.
+    Allows users to edit notes associated with the paper.
+    Only accessible to logged-in users.
+    """
     paper = get_object_or_404(Paper, pk=pk)
     if request.method == 'POST':
         form = NoteForm(request.POST, instance=paper)
@@ -46,6 +57,10 @@ def paper_detail(request, pk):
 
 @login_required
 def upload_json(request):
+    """
+    View to upload papers from a JSON file.
+    Only accessible to logged-in users.
+    """
     if request.method == 'POST':
         try:
             json_file_path = os.path.join(os.path.dirname(__file__), 'data', 'papers.json')
@@ -75,6 +90,10 @@ def upload_json(request):
 
 @login_required
 def run_arxiv_script(request):
+    """
+    View to run a script that queries arXiv.
+    Only accessible to logged-in users.
+    """
     if request.method == 'POST':
         try:
             call_command('query_arxiv')  # Make sure this command is correctly defined
@@ -86,11 +105,18 @@ def run_arxiv_script(request):
 
 @login_required
 def search_papers(request):
+    """
+    View to search for papers by title.
+    Only accessible to logged-in users.
+    """
     query = request.GET.get('query')
     papers = Paper.objects.filter(title__icontains=query) if query else Paper.objects.all()
     return render(request, 'papers/paper_list.html', {'papers': papers})
 
 def fetch_summary(arxiv_id):
+    """
+    Fetch the summary of a paper from arXiv using its ID.
+    """
     base_url = 'http://export.arxiv.org/api/query?id_list='
     query_url = base_url + arxiv_id
     try:
@@ -105,8 +131,14 @@ def fetch_summary(arxiv_id):
     except Exception as e:
         return None
 
-@login_required
+@csrf_exempt
 def upload_papers(request):
+    """
+    View to handle multiple functionalities related to papers:
+    - Finding similar papers using arXiv links.
+    - Running the arXiv query script.
+    - Uploading papers from a JSON file.
+    """
     if request.method == 'POST':
         if 'find_similar_papers' in request.POST:
             form = ArxivLinksForm(request.POST)
@@ -169,10 +201,16 @@ def upload_papers(request):
 
 @login_required
 def average_paper(request):
+    """
+    Placeholder view for the average paper feature.
+    Only accessible to logged-in users.
+    """
     return render(request, 'average_paper.html', {'message': 'Average paper feature coming soon.'})
 
 def query_arxiv(keyword, max_results):
-    # Replace underscores with '%20'
+    """
+    Query arXiv for papers based on a keyword.
+    """
     formatted_keyword = keyword.replace("_", "%20")
     base_url = 'http://export.arxiv.org/api/query?'
     search_query = f'search_query=all:{quote(formatted_keyword)}&start=0&max_results={max_results}&sortBy=submittedDate&sortOrder=descending'
@@ -213,6 +251,9 @@ def query_arxiv(keyword, max_results):
         return []
 
 def parallel_query_arxiv(discipline, max_results):
+    """
+    Query arXiv for papers in parallel using multiple threads.
+    """
     all_results = []
     with concurrent.futures.ThreadPoolExecutor() as executor:
         future_to_keyword = {executor.submit(query_arxiv, keyword, max_results): keyword for keyword in discipline}
@@ -222,17 +263,26 @@ def parallel_query_arxiv(discipline, max_results):
     return all_results
 
 def generate_embeddings(model, summaries):
+    """
+    Generate embeddings for a list of summaries using the provided model.
+    """
     embeddings = model.encode(summaries)
     return embeddings
 
 def save_to_file(data, output_filepath):
+    """
+    Save data to a file in JSON format.
+    """
     with open(output_filepath, 'w') as f:
         json.dump(data, f, indent=4)
     logging.debug(f"Results saved to {output_filepath}")
 
 def fetch_and_process_papers(request):
+    """
+    Fetch and process papers for a given discipline.
+    """
     discipline = request.GET.get('discipline', 'machine learning')
-    max_results = 1000 # Adjust as needed
+    max_results = 2000  # This number was chosen as it is approximately the number of papers published in a fortnight.
     output_file = os.path.join(DATASET_DIR, 'previous_weeks_papers.json')
 
     logging.debug(f"Fetching papers for discipline: {discipline}")
@@ -257,9 +307,13 @@ def fetch_and_process_papers(request):
 
 @login_required
 def trends_closest_view(request):
+    """
+    View to display the papers closest to the average embedding.
+    Only accessible to logged-in users.
+    """
     try:
         discipline = request.GET.get('discipline', 'machine_learning')
-        dataset_file = f'/Users/ewan.mayhew/Jaid/papers_project_dev/papers/data/previous_weeks_papers.json'
+        dataset_file = f'papers_project_dev/papers/data/previous_weeks_papers.json'
         
         if not os.path.exists(dataset_file):
             return HttpResponse(f"No dataset found for discipline: {discipline}")
@@ -278,9 +332,13 @@ def trends_closest_view(request):
 
 @login_required
 def trends_scatter_view(request):
+    """
+    View to display a scatter plot of paper embeddings.
+    Only accessible to logged-in users.
+    """
     try:
         comparison_discipline = request.GET.get('comparison_discipline', 'machine_learning')
-        dataset_file = f'/Users/ewan.mayhew/Jaid/papers_project_dev/papers/data/{comparison_discipline}_dataset.json'
+        dataset_file = f'papers_project_dev/papers/data/{comparison_discipline}_dataset.json'
         
         if not os.path.exists(dataset_file):
             return HttpResponse(f"No dataset found for discipline: {comparison_discipline}")
@@ -354,4 +412,29 @@ def trends_scatter_view(request):
 
 @login_required
 def fetch_and_trends_view(request):
+    """
+    View to render the fetch and trends page.
+    Only accessible to logged-in users.
+    """
     return render(request, 'papers/fetch_and_trends.html')
+
+def run_populators(request):
+    """
+    View to run populator commands that fill out the cannonical databases.
+    Only accessible to logged-in users.
+    """
+    if request.method == 'POST':
+        print("POST request received")  # Debugging
+        try:
+            call_command('populator_loss')
+            call_command('populator_ML')
+            call_command('populator_NLP')
+            call_command('populator_TableRecognition')
+            messages.success(request, 'All populators ran successfully!')
+        except Exception as e:
+            print(f"Error occurred: {str(e)}")  # Debugging
+            messages.error(request, f'An error occurred: {str(e)}')
+        return redirect('paper_list.html')
+    else:
+        print("GET request received")  # Debugging
+    return redirect('paper_list.html')

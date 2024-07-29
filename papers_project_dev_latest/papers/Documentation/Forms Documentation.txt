@@ -1,0 +1,14 @@
+Forms Documentation:
+Below is a description of the forms.py classes and what they do.
+
+PaperUploadForm:
+function description: A form for uploading a JSON file containing paper data. Includes a single field for file input.
+
+NoteForm:
+function description: A form for adding or editing notes on a Paper model instance. Only includes the notes field from the Paper model.
+
+ArxivQueryForm:
+function description: A form for querying arXiv with parameters such as keywords, maximum results, start and end dates, and a similarity threshold. Provides fields for each of these query parameters.
+
+ArxivLinksForm:
+function description: A form for inputting multiple arXiv links. The links are entered as text in a textarea widget, with each link separated by new lines.

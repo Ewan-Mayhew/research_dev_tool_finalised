@@ -1,0 +1,32 @@
+{% extends 'papers/base.html' %}
+
+{% block title %}About{% endblock %}
+
+{% block content %}
+<div class="container mt-4 text-left">
+    <h1>About</h1>
+    <p>Welcome to the Jaid research and development application. This application is designed to allow AI researchers to stay at the cutting edge of research in a number of ML sectors. The application is divided into two sections, accomplishing different tasks: 'ArXiv abstract search' and 'ML Trends'.</p>
+    
+    <h2>ArXiv Abstract Search</h2>
+    <p>This functionality allows papers similar to a set of papers you are interested in to be found. It searches based on the similarity of abstracts. To use this section, follow these instructions:</p>
+    <ul>
+        <li>Paste links to the ArXiv papers in the box, separated by new lines (only include the part of the link specified in the example).</li>
+        <li>Click the 'Embed Abstracts' button. This converts the abstracts of the papers into vectors for mathematical comparisons to be carried out on.</li>
+        <li>Click 'Run ArXiv Query'. This compares the vectorized abstracts of the supplied papers to ones in a database.</li>
+        <li>Click 'Update Paper List' to refresh the home page, giving a list of papers similar to the ones supplied.</li>
+    </ul>
+    
+    <h3>ML Trends</h3>
+    <p>This section allows the user to stay ahead of the curve for published research. Recent publications from a selection of ML topics (including general 'Machine Learning') can be collected. To do this, follow these steps:</p>
+    <ul>
+        <li>Select a topic from the dropdown menu.</li>
+        <li>Once a topic is selected, click 'Fetch Papers'.</li>
+        <li>Once this has run, you have a number of analysis options:
+            <ul>
+                <li><strong>Compute Trending Paper:</strong> Finds and displays the 5 most representative papers from the sample that has been recently published ('recently' here means in about the last 2 weeks).</li>
+                <li><strong>View Trends Scatter Plot:</strong> To use this, a canonical dataset for different disciplines must be generated. If this is your first time running this, you will need to click the 'Run Populators' button, which populates the datasets with canonical papers. Once this has been run, select a comparison dataset with which to compare recently published papers to. Clicking 'View Trends Scatter Plot' will allow you to see a distribution of papers and analyze trends in the topics being researched.</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+{% endblock %}

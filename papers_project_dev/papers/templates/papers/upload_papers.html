@@ -5,6 +5,7 @@
 {% block content %}
 <div class="container mt-4 text-left">
     <h1>Upload Papers</h1>
+    <p> Paste the links to the arXiv papers you want to find similar papers to. The form of the link should be something like 'https://arxiv.org/abs/2407.09141'. Separate each paper by a new line. </p>
     <form method="post" class="d-flex flex-column align-items-left">
         {% csrf_token %}
         <div class="my-2 w-50">{{ form.as_p }}</div>
@@ -12,12 +13,14 @@
     </form>
 
     <h1 class="mt-4">Run arXiv Query</h1>
+    <p> This button compares the abstracts of the papers uploaded to approximately 50000 most recent arxiv publications across various machine learning catagories. Running this takes a while, as it is vectorising all the abstracts. Please be patient (allow up to 5 minutes).</p>
     <form method="post" class="d-flex flex-column align-items-left>
         {% csrf_token %}
         <button type="submit" name="run_arxiv_query" class="btn btn-primary mb-3">Run arXiv Query</button>
     </form>
 
-    <h1 class="mt-4">Upload JSON</h1>
+    <h1 class="mt-4">Update paper list</h1>
+    <p> Once the 'Run arXiv Query' script is run, update the home page by clicking below.</p>
     <form method="post" class="d-flex flex-column align-items-left>
         {% csrf_token %}
         <button type="submit" name="upload_json" class="btn btn-primary mb-3">Update JSON File</button>
