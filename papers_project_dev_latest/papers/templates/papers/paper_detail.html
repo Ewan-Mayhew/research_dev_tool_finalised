@@ -17,12 +17,27 @@
 
     <div class="mt-4">
         <h2>Notes</h2>
-        <form method="post" >
+        <form method="post">
             {% csrf_token %}
             {{ form.as_p }}
             <button type="submit" class="btn btn-success"><i class="fas fa-save"></i> Save</button>
         </form>
         <a href="{% url 'paper_list' %}" class="btn btn-link mt-2"><i class="fas fa-arrow-left"></i> Back to list</a>
     </div>
+
+    <!-- New Implement button -->
+    <div class="mt-4">
+        <form action="{% url 'implement_ideas' paper.id %}" method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-warning"><i class="fas fa-code"></i> Implement</button>
+        </form>
+    </div>
+
+    {% if implementation_code %}
+        <div class="mt-4">
+            <h2>Implementation Code</h2>
+            <pre><code>{{ implementation_code }}</code></pre>
+        </div>
+    {% endif %}
 </div>
 {% endblock %}

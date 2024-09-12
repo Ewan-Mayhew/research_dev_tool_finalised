@@ -365,7 +365,14 @@ def trends_closest_view(request):
     except Exception as e:
         return render(request, 'papers/trends_closest.html', {'error': str(e)})
 
-@login_required
+import os
+import json
+import numpy as np
+from sklearn.manifold import TSNE
+import plotly.graph_objs as go
+from django.shortcuts import render
+from django.http import HttpResponse
+
 def trends_scatter_view(request):
     """
     View to display a scatter plot of paper embeddings.
@@ -373,7 +380,6 @@ def trends_scatter_view(request):
     """
     try:
         comparison_discipline = request.GET.get('comparison_discipline', 'machine_learning')
-        print(comparison_discipline)
         dataset_file_relative = f'papers/data/{comparison_discipline}_dataset.json'
         dataset_file = os.path.abspath(dataset_file_relative)
         
@@ -385,10 +391,7 @@ def trends_scatter_view(request):
             group1 = json.load(file)
         
         # Load previous week's papers
-
         relative_output_file = 'papers/data/previous_weeks_papers.json'
-    
-    # Convert to absolute path
         output_file = os.path.abspath(relative_output_file)
         with open(output_file, 'r') as file:
             group2 = json.load(file)
@@ -414,43 +417,92 @@ def trends_scatter_view(request):
         projections1 = projections[:len(embeddings1)]
         projections2 = projections[len(embeddings1):]
 
-        # Create a Plotly figure
+        # Enhanced Plotly figure
         fig = go.Figure()
+
+        # First group
         fig.add_trace(go.Scatter(
             x=projections1[:, 0], y=projections1[:, 1],
             mode='markers',
-            marker=dict(color='red'),
+            marker=dict(
+                color='rgba(31, 119, 180, 0.7)',  # Blue color with transparency
+                size=10,
+                line=dict(
+                    color='rgba(31, 119, 180, 1)',
+                    width=1
+                )
+            ),
             text=titles1,
             customdata=urls1,  # Add URLs to customdata
+            hovertemplate='<b>%{text}</b><br>URL: %{customdata}<extra></extra>',  # Custom hover info
             name=f'{comparison_discipline.capitalize()} dataset'
         ))
+
+        # Second group
         fig.add_trace(go.Scatter(
             x=projections2[:, 0], y=projections2[:, 1],
             mode='markers',
-            marker=dict(color='blue'),
+            marker=dict(
+                color='rgba(255, 127, 14, 0.7)',  # Orange color with transparency
+                size=10,
+                line=dict(
+                    color='rgba(255, 127, 14, 1)',
+                    width=1
+                )
+            ),
             text=titles2,
             customdata=urls2,  # Add URLs to customdata
+            hovertemplate='<b>%{text}</b><br>URL: %{customdata}<extra></extra>',  # Custom hover info
             name='Last week\'s arXiv papers'
         ))
 
-        # Update plot settings
+        # Update layout with enhanced aesthetics
         fig.update_layout(
-            title='2D Visualization of Paper Embeddings from Two Groups with Jitter',
+            title=dict(
+                text='2D Visualization of Paper Embeddings from Two Groups with Jitter',
+                x=0.5,
+                xanchor='center',
+                font=dict(
+                    size=24,
+                    color='#333'
+                )
+            ),
             xaxis_title='Component 1',
             yaxis_title='Component 2',
             hovermode='closest',
-            legend_title_text='Group',
-            height=800,  # Increased height
-            width=1200   # Increased width
+            legend=dict(
+                title='Group',
+                orientation="h",
+                yanchor="bottom",
+                y=1.02,
+                xanchor="right",
+                x=1
+            ),
+            margin=dict(l=0, r=0, t=100, b=0),  # No left or right margin
+            height=800,  # Height of the plot
+            paper_bgcolor='rgba(255,255,255,1)',  # White background
+            plot_bgcolor='rgba(245, 246, 249, 1)',  # Light grey background for the plot
+            xaxis=dict(
+                gridcolor='rgba(200, 200, 200, 0.5)',  # Light grey gridlines
+                zerolinecolor='rgba(200, 200, 200, 0.5)'
+            ),
+            yaxis=dict(
+                gridcolor='rgba(200, 200, 200, 0.5)',  # Light grey gridlines
+                zerolinecolor='rgba(200, 200, 200, 0.5)'
+            ),
+            dragmode='lasso',  # Default to lasso selection
+            showlegend=True,  # Keep the legend
+            modebar_remove=['select', 'lasso2d', 'zoom', 'zoomIn', 'zoomOut', 'pan', 'autoScale', 'resetScale']  # Remove unwanted tools
         )
 
         # Convert the plot to HTML
-        plot_html = fig.to_html(full_html=False)
+        plot_html = fig.to_html(full_html=False, include_plotlyjs='cdn')
 
         # Render the template with the plot
         return render(request, 'papers/trends_scatter.html', {'plot_html': plot_html})
     except Exception as e:
         return render(request, 'papers/trends_scatter.html', {'error': str(e)})
+
 
 @login_required
 def fetch_and_trends_view(request):
@@ -494,3 +546,53 @@ def run_populators(request):
 
 def about(request):
     return render(request, os.path.abspath(r'papers/templates/papers/about.html'))
+
+from django.shortcuts import render
+import subprocess
+import sys
+def run_code_view(request):
+    output = ""
+    if request.method == "POST":
+        code = request.POST.get("code")
+        try:
+            result = subprocess.run(
+                [sys.executable, "-c", code],
+                capture_output=True,
+                text=True,
+                timeout=5
+            )
+            output = result.stdout if result.stdout else result.stderr
+        except Exception as e:
+            output = str(e)
+    return render(request, os.path.abspath(r'papers\templates\papers\code_runner.html'), {'output': output})
+
+import openai
+from django.shortcuts import render, redirect, get_object_or_404
+from .models import Paper
+
+# Initialize the OpenAI API key (ensure you have this in your settings)
+openai.api_key = 'sk-...AW8A'
+
+def implement_ideas(request, paper_id):
+    paper = get_object_or_404(Paper, id=paper_id)
+
+    if request.method == "POST":
+        # Call ChatGPT API to generate implementation code
+        prompt = f"Implement the ideas discussed in the paper: {paper.title}\nSummary: {paper.summary}"
+
+        try:
+            response = openai.Completion.create(
+                engine="text-davinci-003",  # Or another model of your choice
+                prompt=prompt,
+                max_tokens=1500  # Adjust as necessary
+            )
+            implementation_code = response['choices'][0]['text']
+        except Exception as e:
+            implementation_code = f"Error generating code: {str(e)}"
+
+        return render(request, 'papers/paper_detail.html', {
+            'paper': paper,
+            'implementation_code': implementation_code
+        })
+
+    return redirect('paper_detail', paper_id=paper.id)

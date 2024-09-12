@@ -1,17 +1,111 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Paper Repository{% endblock %}</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Custom styling for a modern look */
+        body, html {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            padding-top: 70px; /* Adjust this value if the navbar height changes */
+            height: 100%; /* Ensure body takes up full height */
+            overflow-y: auto; /* Enable vertical scrolling */
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+
+        .navbar {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: #007bff;
+        }
+
+        .navbar-brand, .nav-link, .btn-outline-success {
+            color: #fff !important;
+        }
+
+        .nav-link {
+            transition: color 0.3s ease-in-out;
+        }
+
+        .nav-link:hover {
+            color: #ffc107 !important;
+        }
+
+        .form-control {
+            border-radius: 25px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .form-control:focus {
+            box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+            border-color: #007bff;
+        }
+
+        .btn-outline-success {
+            border-color: #fff;
+            border-radius: 25px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .btn-outline-success:hover {
+            background-color: #ffc107;
+            border-color: #ffc107;
+            color: #007bff !important;
+        }
+
+        .container {
+            margin-top: 20px;
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Dropdown animations */
+        .navbar-nav .dropdown-menu {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .navbar-nav .show > .dropdown-menu {
+            display: block;
+            opacity: 1;
+        }
+
+        /* Trail styling for Lorentz attractor-like effect */
+        .trail {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: rgba(0, 123, 255, 0.7);
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            z-index: 10000; /* Ensure the trail is above everything */
+            animation: fade 0.5s forwards;
+        }
+
+        @keyframes fade {
+            to {
+                opacity: 0;
+                transform: scale(2) translate(-50%, -50%);
+            }
+        }
+    </style>
 </head>
+
 <body>
-    
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <a class="navbar-brand" href="{% url 'paper_list' %}">Paper Repository</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -22,24 +116,93 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'about' %}">About</a>
                 </li>
-
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'upload_papers' %}">ArXiv abstract search</a>
+                    <a class="nav-link" href="{% url 'upload_papers' %}">ArXiv Abstract Search</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'fetch_and_trends' %}">ML Trends</a>
                 </li>
-
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'run_code' %}">Run Python Code</a>
+                </li>
             </ul>
             <form method="get" action="{% url 'search_papers' %}" class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search papers" aria-label="Search" name="query">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search papers" aria-label="Search"
+                    name="query" id="search-box">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i> Search</button>
+                <ul id="suggestions" class="list-group position-absolute" style="z-index: 1000; width: 100%;"></ul>
             </form>
         </div>
     </nav>
-    <div class="container mt-4">
+
+    <div class="container">
         {% block content %}
         {% endblock %}
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scroll for navbar links
+        $('a.nav-link').on('click', function(event) {
+            if (this.hash !== "") {
+                event.preventDefault();
+                var hash = this.hash;
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top - 70
+                }, 800);
+            }
+        });
+
+        // Search box autocomplete suggestions (dummy data)
+        const papers = [
+            "Neural Networks for Dummies",
+            "Quantum Computing: An Introduction",
+            "Deep Learning Trends 2023",
+            "Python for Data Science",
+            "AI and Machine Learning",
+            "Advanced Algorithms"
+        ];
+
+        $('#search-box').on('input', function() {
+            let query = $(this).val().toLowerCase();
+            let suggestions = papers.filter(paper => paper.toLowerCase().includes(query));
+            let suggestionsList = $('#suggestions');
+            suggestionsList.empty();
+
+            if (suggestions.length && query.length) {
+                suggestions.forEach(suggestion => {
+                    suggestionsList.append(`<li class="list-group-item">${suggestion}</li>`);
+                });
+                suggestionsList.show();
+            } else {
+                suggestionsList.hide();
+            }
+        });
+
+        // Hide suggestions on clicking elsewhere
+        $(document).on('click', function(event) {
+            if (!$(event.target).closest('#search-box').length) {
+                $('#suggestions').hide();
+            }
+        });
+
+        // Mouse trail effect with faster, thinner trails resembling a Lorentz attractor
+        document.addEventListener('mousemove', function(e) {
+            const trail = document.createElement('div');
+            trail.className = 'trail';
+            document.body.appendChild(trail);
+
+            // Position the trail element at the mouse coordinates
+            trail.style.left = e.pageX + 'px';
+            trail.style.top = e.pageY + 'px';
+
+            // Remove the trail element after the animation completes
+            setTimeout(() => {
+                trail.remove();
+            }, 500); // Faster removal to increase the trail density
+        });
+    </script>
 </body>
+
 </html>

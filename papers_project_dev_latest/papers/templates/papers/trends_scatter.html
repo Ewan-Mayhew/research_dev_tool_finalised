@@ -3,26 +3,100 @@
 {% block title %}Trends Scatter Plot{% endblock %}
 
 {% block content %}
-<div class="container-fluid mt-4 w-100">
-    <h1>Scatter Plot Visualization of Paper Embeddings</h1>
-    <p>This visualization shows the 2D projection of the embedding vectors for papers related to machine learning. The red dots are representative of papers published over approximately the last year, and the blue dots represent papers published in approximately the last week.</p>
-    <p> This visualisation allows an easy way of seeing trending areas of research. Simply hover over a point to return the name of the paper. </p>
-    <!-- Here we inject the HTML for the Plotly plot directly into the template -->
-    <div id="plot">
+<div class="container-fluid mt-5 no-trail">
+    <div class="text-center mb-5">
+        <h1 class="display-4">Paper Embeddings Visualization</h1>
+        <p class="lead">Explore the latest trends in machine learning research with this interactive scatter plot. Hover over any point to see the paper's title and click to open it in a new tab.</p>
+    </div>
+            <div class="col-md-4">
+            <div id="document-previews" class="preview-container">
+                <!-- Previews will be dynamically added here -->
+            </div>
+        </div>
+
+
+    <div id="plot" class="rounded shadow-lg bg-white">
         {{ plot_html|safe }}
     </div>
 </div>
 
 <style>
+    body {
+        background-color: #f0f2f5;
+        color: #333;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding-top: 70px; /* Ensure the content is not hidden behind the navbar */
+    }
+
     .container-fluid {
+        max-width: 100%; /* Make sure the plot container spans the full width */
         padding-left: 0;
         padding-right: 0;
+        padding-bottom: 20px;
+    }
+
+    h1.display-4 {
+        font-weight: 700;
+        color: #007bff;
+    }
+
+    .lead {
+        font-size: 1.25rem;
+        color: #555;
     }
 
     #plot {
         width: 100%;
-        height: 800px; /* Adjust the height as needed */
-        margin: 0; /* Ensures no margins */
+        height: auto; /* Let the plot size adjust based on content */
+        min-height: 600px; /* Ensure minimum visibility on smaller screens */
+        margin: 0 auto;
+        padding: 0; /* Remove padding to make the plot span the full width */
+        box-sizing: border-box;
+    }
+
+    .rounded {
+        border-radius: 15px;
+    }
+
+    .shadow-lg {
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .bg-white {
+        background-color: #fff;
+    }
+
+    /* Ensure the page is scrollable */
+    html, body {
+        height: 100%;
+        overflow-y: auto; /* Ensure vertical scroll */
+        overflow-x: hidden; /* Prevent horizontal scroll */
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .lead {
+            font-size: 1rem;
+        }
+
+        #plot {
+            min-height: 500px; /* Adjust height for smaller screens */
+        }
+    }
+
+    @media (max-width: 576px) {
+        h1.display-4 {
+            font-size: 2rem;
+        }
+
+        #plot {
+            min-height: 400px; /* Further adjust height for very small screens */
+        }
+    }
+
+    /* Disable trail effect on this page */
+    .no-trail .trail {
+        display: none !important;
     }
 </style>
 
@@ -30,22 +104,33 @@
     document.addEventListener("DOMContentLoaded", function() {
         var plot = document.getElementById('plot').children[0];
 
+        // Set default mode to lasso selection and remove modebar
+        Plotly.relayout(plot, {
+            'dragmode': 'lasso',
+            'modebar': false // Remove modebar
+        });
+
+        // Enhance hover interaction with better opacity transitions
         plot.on('plotly_hover', function(data) {
             var points = data.points;
             var group = points[0].data.name;
-            
-            Plotly.restyle(plot, {'marker.opacity': 0.1}, [0, 1]); // Set all to low opacity
+
+            Plotly.restyle(plot, {'marker.opacity': 0.2}, [0, 1]); // Set all to lower opacity
             if (group === 'Last 5000 arXiv papers') {
-                Plotly.restyle(plot, {'marker.opacity': 1}, [0]); // Set group 1 to full opacity
+                Plotly.restyle(plot, {'marker.opacity': 1}, [0]); // Highlight recent papers
             } else if (group === 'Last weeks arXiv papers') {
-                Plotly.restyle(plot, {'marker.opacity': 1}, [1]); // Set group 2 to full opacity
+                Plotly.restyle(plot, {'marker.opacity': 1}, [1]); // Highlight trending papers
             }
+
+            document.body.style.cursor = 'pointer'; // Change cursor to pointer on hover
         });
 
         plot.on('plotly_unhover', function(data) {
             Plotly.restyle(plot, {'marker.opacity': 1}, [0, 1]); // Reset all to full opacity
+            document.body.style.cursor = 'default'; // Reset cursor
         });
 
+        // Open paper URL on click
         plot.on('plotly_click', function(data) {
             var points = data.points;
             var url = points[0].customdata;
@@ -53,6 +138,62 @@
                 window.open(url, '_blank');
             }
         });
+
+        // Optional: Add a loader or transition before the plot is fully loaded
+        document.getElementById('plot').classList.add('loading');
+
+        setTimeout(() => {
+            document.getElementById('plot').classList.remove('loading');
+        }, 1000); // Adjust the timeout according to your plot load time
+        document.addEventListener("DOMContentLoaded", function() {
+    var plot = document.getElementById('plot').children[0];
+
+    // Set default mode to lasso selection and remove modebar
+    Plotly.relayout(plot, {
+        'dragmode': 'lasso',
+        'modebar': false // Remove modebar
+    });
+
+    // Enhance hover interaction with better opacity transitions
+    plot.on('plotly_hover', function(data) {
+        var points = data.points;
+        var group = points[0].data.name;
+
+        Plotly.restyle(plot, {'marker.opacity': 0.2}, [0, 1]); // Set all to lower opacity
+        if (group === 'Last 5000 arXiv papers') {
+            Plotly.restyle(plot, {'marker.opacity': 1}, [0]); // Highlight recent papers
+        } else if (group === 'Last weeks arXiv papers') {
+            Plotly.restyle(plot, {'marker.opacity': 1}, [1]); // Highlight trending papers
+        }
+
+        document.body.style.cursor = 'pointer'; // Change cursor to pointer on hover
+    });
+
+    plot.on('plotly_unhover', function(data) {
+        Plotly.restyle(plot, {'marker.opacity': 1}, [0, 1]); // Reset all to full opacity
+        document.body.style.cursor = 'default'; // Reset cursor
+    });
+
+    // Open paper URL on click
+    plot.on('plotly_click', function(data) {
+        var points = data.points;
+        if (points.length > 0) {
+            var url = points[0].customdata;
+            if (url) {
+                window.open(url, '_blank');  // Open the URL in a new tab
+            }
+        }
+    });
+
+    // Optional: Add a loader or transition before the plot is fully loaded
+    document.getElementById('plot').classList.add('loading');
+
+    setTimeout(() => {
+        document.getElementById('plot').classList.remove('loading');
+    }, 1000); // Adjust the timeout according to your plot load time
+});
+
     });
 </script>
+
 {% endblock %}

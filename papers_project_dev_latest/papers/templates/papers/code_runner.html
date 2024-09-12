@@ -1,0 +1,17 @@
+{% extends 'papers/base.html' %}
+
+{% block title %}Execute Python Code{% endblock title %}
+
+{% block content %}
+    <h1>Python Code Runner</h1>
+    <form method="post" action="{% url 'run_code' %}">
+        {% csrf_token %}
+        <textarea name="code" rows="10" cols="50" placeholder="Type your Python code here..."></textarea><br>
+        <button type="submit" class="btn btn-primary">Run Code</button>
+    </form>
+
+    {% if output %}
+        <h2>Output:</h2>
+        <pre>{{ output }}</pre>
+    {% endif %}
+{% endblock content %}

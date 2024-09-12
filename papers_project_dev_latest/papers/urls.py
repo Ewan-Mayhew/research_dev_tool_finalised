@@ -4,6 +4,7 @@ from .views import trends_closest_view, trends_scatter_view
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
 from .views import run_populators
+from .views import run_code_view
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.paper_list, name='paper_list'),
@@ -23,4 +24,7 @@ urlpatterns = [
     path('paper_list/', views.paper_list, name='paper_list'),
     path('run_arxiv_query/', views.run_arxiv_query, name='run_arxiv_query'),
     path('about/', views.about, name='about'),
+    path('run-code/', run_code_view, name='run_code'),
+    path('paper/<int:paper_id>/implement/', views.implement_ideas, name='implement_ideas'),
+
 ]
